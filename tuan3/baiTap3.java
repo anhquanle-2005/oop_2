@@ -1,5 +1,6 @@
+package tuan3;
 import java.util.*;
-public class BT3_T3 {
+public class Bai3 {
     public static void  count(int A, int B, int C) {
         float X1, X2;
         int delta = B*B-4*A*C ;
