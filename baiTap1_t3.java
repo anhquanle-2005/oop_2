@@ -1,8 +1,10 @@
 package tuan3;
 
 import java.util.*;
-public class baiTap1_t3{
-       public static void main(String[] args) {
+public class baiTap1_t3
+{
+       public static void main(String[] args) 
+    {
         int a;
         Scanner sc = new Scanner(System.in);
         System.out.println("nhap vao mot so : ");
