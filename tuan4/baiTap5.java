@@ -1,5 +1,5 @@
 import java.util.*;
-public class baiTap5_T4 {
+public class baiTap5 {
 
     public static void main(String[] args) {
         int a,b,uc,bc;
