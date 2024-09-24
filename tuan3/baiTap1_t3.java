@@ -1,4 +1,4 @@
-package tuan3;
+
 
 import java.util.*;
 public class baiTap1_t3
