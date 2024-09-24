@@ -1,7 +1,8 @@
 import java.util.*;
 public class baiTap5 {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) 
+    {
         int a,b,uc,bc;
         Scanner sc = new Scanner(System.in);
         System.out.println("nhap vao hai so:");
@@ -13,7 +14,8 @@ public class baiTap5 {
         System.out.println("boi chung nho nhat cua "+a+" va "+b+" la "+bc);
 
     }
-    public static int ucln(int x, int y){
+    public static int ucln(int x, int y)
+    {
         do {
             if(x>y)
                 x=x-y;
@@ -22,7 +24,8 @@ public class baiTap5 {
         } while (x!=y);
         return x;
     }
-    public static int bcnn(int x, int y){
+    public static int bcnn(int x, int y)
+    {
         int s= ucln(x, y);
         return x*y/s;
     }
