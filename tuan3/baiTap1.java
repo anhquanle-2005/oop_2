@@ -1,7 +1,7 @@
 
 
 import java.util.*;
-public class baiTap1_t3
+public class baiTap1
 {
        public static void main(String[] args) 
     {
