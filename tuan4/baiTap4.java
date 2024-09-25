@@ -9,7 +9,7 @@ public class baiTap4_T4
         System.out.println("nhap vao mot so nguyen:");
         a = sc.nextInt();
         KtraSoNguyenTo(a);
-    } //test
+    } 
     public static void KtraSoNguyenTo(int x)
     {
         int i,s;
