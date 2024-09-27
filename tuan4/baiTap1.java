@@ -1,7 +1,9 @@
 import java.util.Scanner;
 
-public class baiTap1_t4 {
-    public static void main(String[] args) {
+public class baiTap1 
+{
+    public static void main(String[] args) 
+    {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Nhập vào số n: ");
