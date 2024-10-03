@@ -1,3 +1,4 @@
+
 package oop_2.tuan5;
 
 import java.util.Scanner;
@@ -53,3 +54,4 @@ public class baiTap4
         System.out.println("so " + lapMax + " xuat hien nhieu nhat voi " + maxcount + " lan.");
     }
 }
+
