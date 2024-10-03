@@ -1,7 +1,6 @@
 
 import java.util.*;
-public class baiTap4_T4 
-{
+public class baiTap4{
    public static void main(String[] args) 
     {
         int a;
