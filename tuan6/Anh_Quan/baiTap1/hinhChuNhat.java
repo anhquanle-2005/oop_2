@@ -1,4 +1,4 @@
-package oop_2.tuan6.Anh_Quan.baiTap1;
+package tuan6.Anh_Quan.baiTap1;
 
 import java.util.Scanner;
 

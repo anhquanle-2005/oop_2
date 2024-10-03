@@ -1,4 +1,4 @@
-package oop_2.tuan6.Anh_Quan.baiTap2;
+package tuan6.Anh_Quan.baiTap2;
 import java.util.*;
 public class sinhVien 
 {
@@ -19,10 +19,15 @@ public class sinhVien
         System.out.println("Nhap vao ten sinh vien:");
         this.hoTen= sc.nextLine();
         System.out.println("Nhap diem trung binh cua sinh vien nay:");
-        this.dtb;
+        this.dtb=sc.nextFloat();
     }
-    public void sapXep (int dtb)
-    {
+    // public void sapXep (int dtb)
+    // {
         
+    // }
+
+    public void xuat ()
+    {   
+        System.out.println(this.MSV+ "-" +this.hoTen +"-"+this.dtb);
     }
 }
