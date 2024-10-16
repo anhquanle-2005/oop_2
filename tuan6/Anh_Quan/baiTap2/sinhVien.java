@@ -21,9 +21,10 @@ public class sinhVien
         System.out.println("Nhap diem trung binh cua sinh vien nay:");
         this.dtb=sc.nextFloat();
     }
-    public void SAPXEP(sinhVien [] SVVK){
-        Arrays.sort(SVVK, Comparator.comparingDouble(sinhVien::this.dtb).rever);
-    }
+    // public void sapXep (int dtb)
+    // {
+        
+    // }
 
     public void xuat ()
     {   
