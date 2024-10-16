@@ -1,4 +1,4 @@
-package oop_2.tuan5.baitap7;
+package baitap7;
 import java.util.*;
 public class btap {
     public static void main(String[] args) {

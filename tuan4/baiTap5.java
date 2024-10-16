@@ -1,4 +1,3 @@
-package oop_2.tuan4;
 import java.util.*;
 public class baiTap5 {
 

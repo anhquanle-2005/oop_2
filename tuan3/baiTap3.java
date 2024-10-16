@@ -1,6 +1,6 @@
-package oop_2.tuan3;
+package tuan3;
 import java.util.*;
-public class baiTap3 {
+public class Bai3 {
     public static void  count(int A, int B, int C) {
         float X1, X2;
         int delta = B*B-4*A*C ;

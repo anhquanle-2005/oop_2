@@ -1,7 +1,7 @@
 
-package oop_2.tuan3;
+
 import java.util.*;
-public class baiTap1
+public class baiTap1_t3
 {
        public static void main(String[] args) 
     {

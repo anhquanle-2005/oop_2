@@ -1,7 +1,8 @@
-package oop_2.tuan3;
+package tuan3;
+
 import java.util.Scanner;
 
-public class baiTap6 
+public class bai6 
 {
     public static void main(String[] args) 
     {   

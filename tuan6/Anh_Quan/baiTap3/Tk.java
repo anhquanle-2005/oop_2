@@ -1,9 +1,9 @@
-package oop_2.tuan6.Anh_Quan.baiTap3;
+package tuan6.Anh_Quan.baiTap3;
 import java.util.*;
 public class Tk 
 {
     static Scanner sc;
-    private long soTaiKhoan;
+    private int soTaiKhoan;
     private long soDu;
     private String chuTK; 
 
@@ -13,6 +13,7 @@ public class Tk
         this.soDu=soDu;
         this.chuTK=chuTK;
     }
+
     public void nhap()
     {
         sc= new Scanner(System.in);
@@ -27,7 +28,7 @@ public class Tk
     {
         System.out.println(this.chuTK+"-"+this.soTaiKhoan+"-"+this.soDu);
     }
-    public long guiTien()
+    public int guiTien()
     {
         sc=new Scanner(System.in);
         long guiTien;
@@ -36,7 +37,7 @@ public class Tk
         this.soDu=this.soDu+guiTien;
         return this.soDu;
     }
-    public long rutTien()
+    public int rutTien()
     {
         long rut;
         sc=new Scanner(System.in);
@@ -53,4 +54,5 @@ public class Tk
             return this.soDu;
         }
     }
+
 }
