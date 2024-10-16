@@ -1,4 +1,4 @@
-package tuan2;
+package oop_2.tuan2;
 import java.util.Scanner;
 
 public class baiTap3 {

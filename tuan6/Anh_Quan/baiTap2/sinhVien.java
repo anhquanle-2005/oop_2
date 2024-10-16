@@ -1,4 +1,4 @@
-package tuan6.Anh_Quan.baiTap2;
+package oop_2.tuan6.Anh_Quan.baiTap2;
 import java.util.*;
 public class sinhVien 
 {
@@ -21,9 +21,9 @@ public class sinhVien
         System.out.println("Nhap diem trung binh cua sinh vien nay:");
         this.dtb=sc.nextFloat();
     }
-    public void SAPXEP(sinhVien [] SVVK){
-        Arrays.sort(SVVK, Comparator.comparingDouble(sinhVien::this.dtb).rever);
-    }
+    // public void SAPXEP(sinhVien [] SVVK){
+    //     Arrays.sort(SVVK, Comparator.comparingDouble(sinhVien::this.dtb).rever);
+    // }
 
     public void xuat ()
     {   

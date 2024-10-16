@@ -1,4 +1,4 @@
-package baitap7;                        
+package oop_2.tuan5.baitap7;                      
 import java.util.*;
 public class student {
     private int msv;

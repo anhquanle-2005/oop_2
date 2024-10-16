@@ -1,6 +1,7 @@
+package oop_2.tuan2;
 import java.util.Scanner;
 
-public class bai2 {
+public class baiTap2 {
     public static void main(String[] args) {       
         Scanner scanner = new Scanner(System.in);
         String name;

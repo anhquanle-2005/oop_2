@@ -1,3 +1,4 @@
+package oop_2.tuan4;
 public class baiTap2 
 {
     public static void main(String[] args) 

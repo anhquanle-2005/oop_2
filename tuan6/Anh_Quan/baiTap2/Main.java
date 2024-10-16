@@ -1,4 +1,4 @@
-package tuan6.Anh_Quan.baiTap2;
+package oop_2.tuan6.Anh_Quan.baiTap2;
 
 import java.util.*;
 
