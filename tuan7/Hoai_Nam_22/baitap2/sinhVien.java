@@ -1,5 +1,4 @@
-package tuan7.hoainam22.baitap2;
-import java.text.SimpleDateFormat;
+package tuan7.Hoai_Nam_22.baitap2;
 import java.util.*;
 public class sinhVien {
     private String msv;
