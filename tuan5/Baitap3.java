@@ -1,4 +1,4 @@
-import java.util.Arrays;
+wimport java.util.Arrays;
 
 public class SortArray {
     public static void main(String[] args) {
