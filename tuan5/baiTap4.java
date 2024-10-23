@@ -1,5 +1,5 @@
 
-package oop_2.tuan5;
+
 
 import java.util.Scanner;
 

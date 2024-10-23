@@ -1,6 +1,6 @@
-wimport java.util.Arrays;
+import java.util.Arrays;
 
-public class SortArray {
+public class baiTap3 {
     public static void main(String[] args) {
         // Khởi tạo mảng
         int[] array = {5, 2, 9, 1, 5, 6};
