@@ -1,4 +1,4 @@
-package tuan8.Hoai_Nam_22.bai2;
+package tuan8.Hoai_Nam_22.baitap2;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package tuan8.Hoai_Nam_22.bai1;
+package tuan8.Hoai_Nam_22.baiTap1;
 
 public class meo extends dongVat{
     public meo(String ten, int tuoi)
@@ -10,3 +10,4 @@ public class meo extends dongVat{
         return "meo meo";
     }
 }
+

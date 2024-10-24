@@ -1,4 +1,4 @@
-package tuan8.Hoai_Nam_22.bai1;
+package tuan8.Hoai_Nam_22.baiTap1;
 
 public class dongVat {
     protected String ten;

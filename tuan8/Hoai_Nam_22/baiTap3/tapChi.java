@@ -1,4 +1,4 @@
-package tuan8.Hoai_Nam_22.bai3;
+package tuan8.Hoai_Nam_22.baiTap3;
 
 public class tapChi extends taiLieu{
     protected String soPhatHanh;

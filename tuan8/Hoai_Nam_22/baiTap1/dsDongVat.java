@@ -1,4 +1,4 @@
-package tuan8.Hoai_Nam_22.bai1;
+package tuan8.Hoai_Nam_22.baiTap1;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -44,7 +44,7 @@ public class dsDongVat {
                     DONGVAT.add(new meo(ten, tuoi));
                     break;
                 default:
-                    System.out.println("giá trị nhạp vao khong dung hay nhap vao nhung gia tri (cho|meo|chim)");
+                    System.out.println("gia tri nhap vao khong dung hay nhap vao nhung gia tri (cho|meo|chim)");
                     System.out.println("moi nhap lai......");
                     i--;
                     break;
