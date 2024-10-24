@@ -5,6 +5,7 @@ public class cho extends dongVat {
     {
         super(ten,tuoi);
     }
+    @Override
     public String tiengKeu()
     {
         return "gau gau";

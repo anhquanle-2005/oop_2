@@ -17,18 +17,38 @@ public class dsDongVat {
             
             System.out.print("nhap vao loai dong vat: ");
             loai = sc.nextLine();
-            System.out.print("nhap vao ten dong vat: ");
-            ten = sc.nextLine();
-            System.out.print("nhap vao tuoi cua dong vat: ");
-            tuoi = sc.nextInt();
-            sc.nextLine();
-            if(loai.equals("meo"))
-                DONGVAT.add(new meo(ten,tuoi));
-            else
-                if(loai.equals("cho"))
-                    DONGVAT.add(new cho(ten,tuoi));
-                else
-                    DONGVAT.add(new chim(ten,tuoi));
+            switch (loai) 
+            {
+                case "cho":
+                    System.out.print("nhap vao ten dong vat: ");
+                    ten = sc.nextLine();
+                    System.out.print("nhap vao tuoi cua dong vat: ");
+                    tuoi = sc.nextInt();
+                    sc.nextLine();
+                    DONGVAT.add(new cho(ten, tuoi));
+                    break;
+                case "meo":
+                    System.out.print("nhap vao ten dong vat: ");
+                    ten = sc.nextLine();
+                    System.out.print("nhap vao tuoi cua dong vat: ");
+                    tuoi = sc.nextInt();
+                    sc.nextLine();
+                    DONGVAT.add(new meo(ten, tuoi));
+                    break;
+                case "chim":
+                    System.out.print("nhap vao ten dong vat: ");
+                    ten = sc.nextLine();
+                    System.out.print("nhap vao tuoi cua dong vat: ");
+                    tuoi = sc.nextInt();
+                    sc.nextLine();
+                    DONGVAT.add(new meo(ten, tuoi));
+                    break;
+                default:
+                    System.out.println("giá trị nhạp vao khong dung hay nhap vao nhung gia tri (cho|meo|chim)");
+                    System.out.println("moi nhap lai......");
+                    i--;
+                    break;
+            }      
         }
        
         for (dongVat dv : DONGVAT) {

@@ -5,6 +5,7 @@ public class chim extends dongVat{
     {
         super(ten,tuoi);
     }
+    @Override
     public String tiengKeu(){
         return "qua qua";
     }

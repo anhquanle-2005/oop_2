@@ -5,6 +5,7 @@ public class meo extends dongVat{
     {
         super(ten,tuoi);
     }
+    @Override
     public String tiengKeu(){
         return "meo meo";
     }
