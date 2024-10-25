@@ -1,4 +1,4 @@
-package oop_2.tuan2;
+package tuan2;
 import java.util.Scanner;
 public class baiTap1 {
     public static void main(String[] args) {

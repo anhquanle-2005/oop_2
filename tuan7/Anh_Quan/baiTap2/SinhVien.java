@@ -1,4 +1,4 @@
-package oop_2.tuan7.Anh_Quan.baiTap2;
+package tuan7.Anh_Quan.baiTap2;
 public class SinhVien {
     private String msv;
     private String hoTen;

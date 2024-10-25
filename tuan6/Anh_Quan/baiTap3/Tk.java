@@ -1,4 +1,4 @@
-package oop_2.tuan6.Anh_Quan.baiTap3;
+package tuan6.Anh_Quan.baiTap3;
 import java.util.*;
 public class Tk 
 {

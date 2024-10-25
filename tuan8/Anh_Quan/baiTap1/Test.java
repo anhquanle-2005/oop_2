@@ -1,4 +1,4 @@
-package oop_2.tuan8.Anh_Quan.baiTap1;
+package tuan8.Anh_Quan.baiTap1;
 
 public class Test {
     public static void main(String[] args) {

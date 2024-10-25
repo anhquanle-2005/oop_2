@@ -1,4 +1,4 @@
-package oop_2.tuan5;
+package tuan5;
 
 import java.util.Scanner;
 

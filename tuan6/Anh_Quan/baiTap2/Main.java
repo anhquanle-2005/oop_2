@@ -1,4 +1,4 @@
-package oop_2.tuan6.Anh_Quan.baiTap2;
+package tuan6.Anh_Quan.baiTap2;
 
 import java.util.*;
 
@@ -20,5 +20,7 @@ public class Main {
         }
         for (sinhVien sx :sv)
             sx.xuat();
+
+        
     }
 }

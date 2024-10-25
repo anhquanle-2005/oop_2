@@ -1,4 +1,4 @@
-package oop_2.tuan3;
+package tuan3;
 import java.util.*;
 public class baiTap3 {
     public static void  count(int A, int B, int C) {
