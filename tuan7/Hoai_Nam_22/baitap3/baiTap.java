@@ -26,7 +26,6 @@ public class baiTap {
         tr = sc.nextInt();
         if(tr == 1)
             tk.rutTien();
-        System.out.println("so du hien tai la: "+tk.getsoDu());
-        
+        System.out.println("so du hien tai la: "+tk.getsoDu()); 
     }
 }
