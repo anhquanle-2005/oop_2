@@ -20,6 +20,7 @@ public class baiTap1_t3
                 System.out.println("so "+x+" la so duong");
             else
                 System.out.println("so "+x+" la so am");
+            
     }
 
     
