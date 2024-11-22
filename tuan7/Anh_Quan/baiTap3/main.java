@@ -19,7 +19,6 @@ public class main {
             System.out.println("Nhap 0: De thoat khoi vong lap");
             System.out.println("Quy khach muon lam buoc nao:");
             buoc=sc.nextInt();
-
             switch (buoc) {
                 case 1:
                     // in thông tin co ban cua chu tai khoan 1
@@ -43,6 +42,5 @@ public class main {
             }
         }
         while(buoc!=0);
-
     }   
 }
