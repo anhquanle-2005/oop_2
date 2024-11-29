@@ -1,5 +1,10 @@
 package tuan11;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -11,6 +16,17 @@ public class Phong {
 
     public Phong() {
         DSMAYTINH = new ArrayList<>();
+    }
+
+    public Phong(String maPhong) {
+        this.maPhong = maPhong;
+    }
+
+    public Phong(String maPhong, String loaiPhong, Double phiPhong) {
+        this.maPhong = maPhong;
+        this.loaiPhong = loaiPhong;
+        this.phiPhong = phiPhong;
+        this.DSMAYTINH=new ArrayList<>();
     }
 
     public String getMaPhong() {
@@ -42,14 +58,52 @@ public class Phong {
     }
 
     public void setDSMAYTINH(ArrayList<MayTinh> dSMAYTINH) {
-        DSMAYTINH = dSMAYTINH;
+        this.DSMAYTINH = dSMAYTINH;
     }
 
     public void themMayTinh() {
         MayTinh mt = new MayTinh();
         mt.Nhap();
         DSMAYTINH.add(mt);
+        ghiFileMayTinh(mt);
     }
+
+    public MayTinh timMayTinh(String maMay)
+    {
+        for(MayTinh mt: DSMAYTINH)
+            if(mt.getMaMay().equals(maMay) && mt.getTrangThai().equals("Chua dat"))
+                return mt;
+        return null;
+    }
+    public void ghiFileMayTinh(MayTinh mt) {
+        try {
+            FileWriter fw = new FileWriter("dsMayTinh.txt", true);
+            BufferedWriter bw = new BufferedWriter(fw);
+            bw.write(this.maPhong+","+mt.toString());
+            bw.newLine();
+            bw.close();
+        } catch (IOException e) {
+            System.out.println("Loi khi ghi file may tinh: " + e.getMessage());
+        }
+    }
+    public void capNhatFileMayTinh() {
+        try {
+            FileWriter fw = new FileWriter("dsMayTinh.txt"); 
+            BufferedWriter bw = new BufferedWriter(fw);
+            for (MayTinh mt : getDSMAYTINH()) {
+                bw.write(this.getMaPhong() +","+ mt.toString());
+                bw.newLine();
+            }
+            bw.close();
+            fw.close();
+            System.out.println("Cap nhat danh sach may tinh thanh cong");
+        } catch (IOException e) {
+            System.out.println("Loi khi cap nhat file may tinh: " + e.getMessage());
+        }
+    }
+    
+
+    
 
     public void xoaMayTinh(String maMT) {
         DSMAYTINH.removeIf(mt -> maMT.equals(mt.getMaMay()));
@@ -63,6 +117,23 @@ public class Phong {
         return null;
     }
 
+    public boolean kiemTraSoPhong(String so) {
+        return so.length() == 3 &&
+                so.matches(".*[0-9]+.*") && 
+                !so.contains(" ") &&
+                !so.matches(".*[!@#$%^&*()_+\\-=\\[\\]{};':\"\\\\|,.<>\\/?]+.*") &&
+                !so.matches(".*[a-zA-Z]+.*");
+    }
+    public void hienThiDanhSachMayTinh(String trangThai)
+    {
+        System.out.println("Danh sach may tinh chua dat");
+        for(MayTinh mt:DSMAYTINH)
+        {
+            if (mt.getTrangThai().equals(trangThai)) {
+                hienThiThongTinMayTinh(mt);
+            }
+        }
+    }
     public void hienThiDanhSachMayTinh() {
         System.out.println("Danh sach may tinh Pho thong:");
         for (MayTinh mt : DSMAYTINH) {
@@ -100,13 +171,18 @@ public class Phong {
     public void Nhap() {
         Scanner sc = new Scanner(System.in);
         boolean valid = false;
-
         System.out.println("Them phong moi");
         System.out.print("Nhap vao so phong: ");
-        int soPhong = sc.nextInt();
-        sc.nextLine();
+        String soPhong = sc.nextLine();
         do {
-            System.out.println("Nhap vao loai phong (phong Don || phong Doi || phong Vip || Phong thi Dau):");
+            if(!kiemTraSoPhong(soPhong)){
+                System.out.println("So phong chi co 3 chu so");
+                System.out.println("Nhap lai: ");
+                soPhong=sc.nextLine();
+            }
+        } while (!kiemTraSoPhong(soPhong));
+        do {
+            System.out.println("Nhap vao loai phong (phong Don || phong Doi || phong Vip || phong Thi Dau):");
             this.loaiPhong = sc.nextLine();
             switch (this.loaiPhong) {
                 case "phong Don":
@@ -124,7 +200,7 @@ public class Phong {
                     this.maPhong = "PV" + soPhong;
                     valid = true;
                     break;
-                case "Phong thi Dau":
+                case "phong Thi Dau":
                     this.phiPhong = 20000.0;
                     this.maPhong = "PX" + soPhong;
                     valid = true;
@@ -135,11 +211,8 @@ public class Phong {
             }
         } while (!valid);
     }
-
     @Override
     public String toString() {
-        return maPhong + ", " + loaiPhong + ", " + phiPhong;
+        return maPhong + "," + loaiPhong + "," + phiPhong;
     }
-
-    
 }

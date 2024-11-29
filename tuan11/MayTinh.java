@@ -88,7 +88,7 @@ public class MayTinh {
         this.ram=sc.nextLine();
         do
         {
-            System.out.println("May la loai nao (Pho thong || Trung cap || Cao Cap): ");
+            System.out.println("May la loai nao (Pho thong || Trung cap || Cao cap): ");
             this.loaiMay=sc.nextLine();
             switch (this.loaiMay) {
                 case "Pho thong":
@@ -105,6 +105,7 @@ public class MayTinh {
                     break;
                 default:
                     System.out.println("Lua chon khong hop le, hay chon lai");
+                    sc.nextLine();
                     break;
             }
         }
@@ -122,13 +123,11 @@ public class MayTinh {
                     System.out.println(e.getMessage() + ", hay nhap lai."); 
                 } 
         } while (!valid); 
-        sc.close(); 
     }
     @Override
     public String toString() {
-        return "MayTinh [maMay=" + maMay + ", cpu=" + cpu + ", ram=" + ram + ", gpu=" + gpu + ", loaiMay=" + loaiMay
-                + ", trangThai=" + trangThai + ", giaGio=" + giaGio + "]";
+        return maMay + "," + cpu + "," + ram + "," + gpu + "," + loaiMay
+                + "," + trangThai + "," + giaGio;
     }
-    
 }
 
