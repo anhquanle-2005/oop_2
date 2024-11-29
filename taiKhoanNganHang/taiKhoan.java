@@ -116,14 +116,18 @@ public abstract class taiKhoan {
         SDT = sc.nextLine();
         setOTP(OTP);
     }
-    public void xuat(){
-        System.out.println(getSTK()+" - "+gettenTK()+" - "+getsoDu()+" - "+getOTP());
+    public void xuat()
+    {
+        System.out.println("So tai khoan: "+getSTK());
+        System.out.println("Ten nguoi dung: "+gettenTK());
+        System.out.println("So du: "+getsoDu());
     }
     public void nhapPassDoi(){
         int dem =0;
         int dem1 =0;
         int dem2 =0;
         int dem3 =0;
+        setOTP(OTP);
         String passcu, passmoi;
         System.out.print("nhap vao mat khau cu: ");
         passcu = sc.nextLine();
@@ -186,36 +190,37 @@ public abstract class taiKhoan {
     public abstract double  guiTien(double B);
     public abstract double rutTien(double A);
     public void quenMK()
-    {
-        System.out.print("Nhap vao so dien thoai: ");
-        String sdtnhap = sc.nextLine();
-        setSDT(sdtnhap);
-        int dem = 0;
-        while(!sdtnhap.equals(SDT)&&dem<3){
-            System.out.println("So dien thoai khong hop le !");
+    {   
+
+            setOTP(OTP);
             System.out.print("Nhap vao so dien thoai: ");
-            sdtnhap = sc.nextLine();
-            dem++;
-        }
-        if(dem>=3)
-            throw new IllegalArgumentException("thao tac sai qua nhieu lan cho phep !");
-        System.out.println(getOTP());
-        int demotp =0;
-        System.out.print("Nhap vao OTP: ");
-        int OTPNhap = sc.nextInt();
-        sc.nextLine();
-        while(OTPNhap != this.OTP && demotp <2){
-            System.out.println("ma OTP khong hop le !");
+            String sdtnhap = sc.nextLine();
+            setSDT(sdtnhap);
+            int dem = 0;
+            while(!sdtnhap.equals(SDT)&&dem<3){
+                System.out.println("So dien thoai khong hop le !");
+                System.out.print("Nhap vao so dien thoai: ");
+                sdtnhap = sc.nextLine();
+                dem++;
+            }
+            if(dem>=3)
+                throw new IllegalArgumentException("thao tac sai qua nhieu lan cho phep !");
+            System.out.println(getOTP());
+            int demotp =0;
             System.out.print("Nhap vao OTP: ");
-            OTPNhap = sc.nextInt();
-            demotp ++;
-        }
-        if(demotp>=3)
-            throw new IllegalArgumentException("thao tac sai qua so lan cho phep");
-        System.out.print("thiet lap passWord: ");
-        String passWordNew = sc.nextLine();
-        setpassWord(passWordNew);
-        System.out.println("doi mat khau thanh cong !");
+            int OTPNhap = sc.nextInt();
+            sc.nextLine();
+            while(OTPNhap != this.OTP && demotp <2){
+                System.out.println("ma OTP khong hop le !");
+                System.out.print("Nhap vao OTP: ");
+                OTPNhap = sc.nextInt();
+                demotp ++;
+            }
+            if(demotp>=3)
+                throw new IllegalArgumentException("thao tac sai qua so lan cho phep");
+            System.out.print("thiet lap passWord: ");
+            String passWordNew = sc.nextLine();
+            setpassWord(passWordNew);
     }
     public double chuyentien(double tienChuyen, int A)
     {

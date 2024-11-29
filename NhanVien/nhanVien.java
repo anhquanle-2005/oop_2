@@ -90,8 +90,10 @@ public abstract class nhanVien implements InhanVien{
         passWord = sc.nextLine();
         System.out.print("nhap vao luong co ban: ");
         luongCB = sc.nextDouble();
+        sc.nextLine();
         System.out.print("nhapp vao so dien thoai: ");
         SDT = sc.nextLine();
+        setSDT(SDT);
         System.out.print("nhap vao ngay bat dau theo dinh dang (yyyy-MM-dd): ");
         String date = sc.nextLine();
         try {
@@ -145,6 +147,6 @@ public abstract class nhanVien implements InhanVien{
         setpassWord(passWord);
         System.out.println("Doi mat khau thanh cong !");
     }
-    
+    public abstract void chamCong();
 
 }
