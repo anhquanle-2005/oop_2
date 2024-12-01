@@ -9,8 +9,8 @@ public class BaiTap {
     public static void main(String[] args) {
         int buoc = 0;
         do {
-            File f= new File("D:\\OOP\\thongTinTaiKhoan.txt");
-            ds.DocThongTin(f);
+            // File f= new File("D:\\OOP\\thongTinTaiKhoan.txt");
+            // ds.DocThongTin(f);
             System.out.println("Chon yeu cau cua ban");
             System.out.println("Nhap 1: Dang ky tai khoan");
             System.out.println("Nhap 2: Dang nhap tai khoan");

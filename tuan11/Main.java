@@ -18,7 +18,7 @@ public class Main {
             System.out.println("2. Them may tinh vao phong: ");
             System.out.println("3. Hien thi danh sach phong: ");
             System.out.println("4. Cap nhat trang thai may tinh: ");
-            System.out.println("5. Chon phong: ");
+            System.out.println("5. Chon phong ");
             System.out.println("6. Hien thi thong tin may o phong: ");
             System.out.println("7. Thoat");
             System.out.print("Nhap lua chon cua ban: ");
@@ -100,7 +100,7 @@ public class Main {
                                     if(m1!=null)
                                     {
                                         m1.setTrangThai("Da dat");
-                                        p1.capNhatFileMayTinh();
+                                        p1.capNhatTrangThaiMay(m1);
                                         dsPhong.capNhatfile();
                                     }
 

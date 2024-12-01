@@ -6,6 +6,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Phong {
@@ -86,11 +87,57 @@ public class Phong {
             System.out.println("Loi khi ghi file may tinh: " + e.getMessage());
         }
     }
+    /*
+     * for(int i=0; i<danhSachMay.size();i++)
+     * {
+     *      String [] parts= danhSachMay.get(i).split(",");
+     *      if(parts[1].equals(mt.getMaMay()))
+     *      {
+     *          parts[6]=mt.getTrangThai();
+     *          danhSachMay.set(i,String.join(",", parts))
+     *      } 
+     * 
+     * }
+     */
+    public void capNhatTrangThaiMay(MayTinh mt) {
+        try {
+            BufferedReader br = new BufferedReader(new FileReader("dsMayTinh.txt"));
+            List<String> danhSachMay = new ArrayList<>();
+            String line;
+            while ((line = br.readLine()) != null) {
+                danhSachMay.add(line);
+            }
+            br.close();
+
+            for (int i = 0; i < danhSachMay.size(); i++) {
+                String[] parts = danhSachMay.get(i).split(",");
+                if (parts[1].equals(mt.getMaMay())) {
+                    parts[6] = mt.getTrangThai(); 
+                    danhSachMay.set(i, String.join(",", parts));
+                    break;
+                }
+            }
+            BufferedWriter bw = new BufferedWriter(new FileWriter("dsMayTinh.txt"));
+            for (String may : danhSachMay) {
+                bw.write(may);
+                bw.newLine();
+            }
+            bw.close();
+    
+            System.out.println("Cập nhật trạng thái máy thành công");
+        } catch (IOException e) {
+            System.out.println("Lỗi khi cập nhật file máy tính: " + e.getMessage());
+        }
+    }
+    
     public void capNhatFileMayTinh() {
         try {
             FileWriter fw = new FileWriter("dsMayTinh.txt"); 
+
+     
+
             BufferedWriter bw = new BufferedWriter(fw);
-            for (MayTinh mt : getDSMAYTINH()) {
+            for (MayTinh mt : DSMAYTINH) {
                 bw.write(this.getMaPhong() +","+ mt.toString());
                 bw.newLine();
             }
@@ -101,10 +148,6 @@ public class Phong {
             System.out.println("Loi khi cap nhat file may tinh: " + e.getMessage());
         }
     }
-    
-
-    
-
     public void xoaMayTinh(String maMT) {
         DSMAYTINH.removeIf(mt -> maMT.equals(mt.getMaMay()));
     }
