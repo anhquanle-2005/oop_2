@@ -20,5 +20,7 @@ public class Main {
         }
         for (sinhVien sx :sv)
             sx.xuat();
+
+        
     }
 }

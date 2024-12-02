@@ -1,5 +1,9 @@
 
+<<<<<<< HEAD
 
+=======
+package tuan3;
+>>>>>>> Anh_Quan
 import java.util.*;
 public class baiTap1_t3
 {

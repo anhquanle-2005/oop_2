@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 package baitap7;
+=======
+package tuan5.baitap7;
+>>>>>>> Anh_Quan
 import java.util.*;
 public class btap {
     public static void main(String[] args) {

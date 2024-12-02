@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+package tuan4;
+>>>>>>> Anh_Quan
 public class baiTap2 
 {
     public static void main(String[] args) 

@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+package tuan4;
+>>>>>>> Anh_Quan
 import java.util.Scanner;
 public class baiTap3 
 {

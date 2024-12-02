@@ -1,4 +1,8 @@
 
+<<<<<<< HEAD
+=======
+package tuan4;
+>>>>>>> Anh_Quan
 import java.util.*;
 public class baiTap4{
 

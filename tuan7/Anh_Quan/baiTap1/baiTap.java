@@ -1,4 +1,4 @@
-package oop_2.tuan7.Anh_Quan.baiTap1 ;
+package tuan7.Anh_Quan.baiTap1 ;
 import java.util.Scanner;
 public class baiTap 
 {   

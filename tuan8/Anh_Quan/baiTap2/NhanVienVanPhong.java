@@ -1,4 +1,4 @@
-package oop_2.tuan8.Anh_Quan.baiTap2;
+package tuan8.Anh_Quan.baiTap2;
 
 public class NhanVienVanPhong extends NhanVien{
     private double heSo;
