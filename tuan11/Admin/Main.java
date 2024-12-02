@@ -1,4 +1,4 @@
-package tuan11;
+package Admin;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -16,13 +16,12 @@ public class Main {
             System.out.println("==== MENU ====");
             System.out.println("1. Them phong");
             System.out.println("2. Them may tinh vao phong: ");
-            System.out.println("3. Hien thi danh sach phong: ");
-            System.out.println("4. Cap nhat trang thai may tinh: ");
-            System.out.println("5. Chon phong ");
-            System.out.println("6. Hien thi thong tin may o phong: ");
+            System.out.println("3. Hien thi danh sach phong: ");//nv
+            System.out.println("4. Cap nhat trang thai may tinh: ");//nv
+            System.out.println("5. Chon phong ");//nv
+            System.out.println("6. Hien thi thong tin may o phong: ");//nv
             System.out.println("7. Thoat");
             System.out.print("Nhap lua chon cua ban: ");
-
             try {
                 choice = sc.nextInt();
                 sc.nextLine(); 

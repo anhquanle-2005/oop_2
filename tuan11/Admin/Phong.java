@@ -1,4 +1,4 @@
-package tuan11;
+package Admin;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -65,8 +65,23 @@ public class Phong {
     public void themMayTinh() {
         MayTinh mt = new MayTinh();
         mt.Nhap();
-        DSMAYTINH.add(mt);
-        ghiFileMayTinh(mt);
+        int dem=0;
+        for (MayTinh mayTinh : DSMAYTINH) {
+            if(mt.getMaMay().equals(mayTinh.getMaMay()))
+            {
+                dem++;
+            }
+        }
+        if(dem==0)
+        {
+            DSMAYTINH.add(mt);
+            ghiFileMayTinh(mt);
+            System.out.println("Them ma may thanh cong");
+        }
+        else 
+            System.out.println("Da co ma may");
+
+
     }
 
     public MayTinh timMayTinh(String maMay)
@@ -123,19 +138,14 @@ public class Phong {
                 bw.newLine();
             }
             bw.close();
-    
-            System.out.println("Cập nhật trạng thái máy thành công");
         } catch (IOException e) {
-            System.out.println("Lỗi khi cập nhật file máy tính: " + e.getMessage());
+            System.out.println("Loi khi cap nhat: " + e.getMessage());
         }
     }
     
     public void capNhatFileMayTinh() {
         try {
-            FileWriter fw = new FileWriter("dsMayTinh.txt"); 
-
-     
-
+            FileWriter fw = new FileWriter("dsMayTinh.txt",true); 
             BufferedWriter bw = new BufferedWriter(fw);
             for (MayTinh mt : DSMAYTINH) {
                 bw.write(this.getMaPhong() +","+ mt.toString());

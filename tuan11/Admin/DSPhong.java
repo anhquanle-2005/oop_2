@@ -1,4 +1,4 @@
-package tuan11;
+package Admin;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -88,13 +88,27 @@ public class DSPhong {
         try {
             Phong pm = new Phong();
             pm.Nhap();
-            DSPhong.add(pm);
-            ghiFilePhong(pm);
+            int ddem =0;
+            for (Phong phong : DSPhong) {
+                if(pm.getMaPhong().equals(phong.getMaPhong())){
+                    ddem++;
+                }
+            }
+            if(ddem==0)
+            {
+                DSPhong.add(pm);
+                ghiFilePhong(pm);
+                System.out.println("Them thanh cong");
+            }
+            else 
+                System.out.println("Da co ma phong");
         } catch (Exception e) {
             System.out.println("Lỗi khi thêm phòng: " + e.getMessage());
         }
     }
 
+
+    
     public void ghiFilePhong(Phong pm) {
         try {
             FileWriter fw = new FileWriter("dsphong.txt", true);

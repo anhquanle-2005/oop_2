@@ -1,4 +1,4 @@
-package tuan11;
+package Admin;
 
 import java.util.Scanner;
 
@@ -11,9 +11,7 @@ public class MayTinh {
     private String trangThai;
     private Double giaGio;
     public MayTinh() {
-    }
-   
-    
+    } 
     public MayTinh(String maMay, String cpu, String ram, String gpu, String loaiMay, String trangThai, Double giaGio) {
         this.maMay = maMay;
         this.cpu = cpu;
