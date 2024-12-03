@@ -44,8 +44,6 @@ public class DSPhong {
             System.out.println("Loi dinh dang so: " + e.getMessage());
         }
     }
-    
-
     public void docfileMayTinh() {
         try {
             FileReader fr = new FileReader("dsMayTinh.txt");
