@@ -1,7 +1,7 @@
 
 import java.util.*;
-public class baiTap4_T4 
-{
+public class baiTap4{
+
    public static void main(String[] args) 
     {
         int a;
@@ -9,7 +9,7 @@ public class baiTap4_T4
         System.out.println("nhap vao mot so nguyen:");
         a = sc.nextInt();
         KtraSoNguyenTo(a);
-    }
+    } 
     public static void KtraSoNguyenTo(int x)
     {
         int i,s;

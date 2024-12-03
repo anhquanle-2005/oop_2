@@ -1,43 +1,25 @@
 package TH.BTN;
 
-import java.io.Serializable;
-
-public abstract class TaiKhoan implements Serializable {
+public class TaiKhoan {
+    protected String maKH;
+    protected String matKhau;
     protected String tenTaiKhoan;
-    protected double soDu;
-    protected int thoiGianSuDung; // Thời gian chơi tính bằng phút
 
-    public TaiKhoan(String tenTaiKhoan, double soDu) {
+    public TaiKhoan(String maTK, String matKhau, String tenTaiKhoan) {
+        this.maKH = maTK;
+        this.matKhau = matKhau;
         this.tenTaiKhoan = tenTaiKhoan;
-        this.soDu = soDu;
-        this.thoiGianSuDung = 0;
+    }
+
+    public String getMaKH() {
+        return maKH;
+    }
+
+    public String getMatKhau() {
+        return matKhau;
     }
 
     public String getTenTaiKhoan() {
         return tenTaiKhoan;
-    }
-
-    public double getSoDu() {
-        return soDu;
-    }
-
-    public abstract void napTien(double soTien);
-
-    public void tangThoiGianSuDung(int phut) {
-        if (phut > 0) {
-            thoiGianSuDung += phut;
-            System.out.println("Đã tăng thời gian sử dụng: " + phut + " phút");
-        } else {
-            System.out.println("Thời gian không hợp lệ.");
-        }
-    }
-
-    public void xemSoGioChoi() {
-        System.out.println("Số giờ chơi: " + (thoiGianSuDung / 60.0) + " giờ");
-    }
-
-    @Override
-    public String toString() {
-        return tenTaiKhoan + "," + soDu + "," + thoiGianSuDung;
     }
 }

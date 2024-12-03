@@ -1,1 +1,1 @@
-Group 2 của môn thực hành lập trình hướng đối tượng 
+Group 2 của môn Thực Hành Lập Trình Hướng Đối Tượng
