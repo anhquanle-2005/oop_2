@@ -1,5 +1,4 @@
 package taiKhoanNganHang;
-
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileReader;
@@ -243,27 +242,30 @@ public class baiTap{
                                                 System.out.println("--------------menu------------");
                                                 System.out.println("nhap vao lua chon: ");
                                                 Ch = sc.nextInt();
+                                                sc.nextLine();
                                                 switch (Ch) {
                                                     case 1:
                                                         String stknh;
-                                                        int t=0,dems =0;
+                                                        int t=-1,dems =0;
+                                                        
                                                         do
                                                         {
                                                             dems++;
-                                                            System.out.println("Nhap vao so tai khoan: ");
+                                                            System.out.print("Nhap vao so tai khoan: ");
                                                             stknh = sc.nextLine();
                                                             for (int i = 0; i < TAIKHOAN.size(); i++) {
                                                                 if(stknh.equals(TAIKHOAN.get(i).STK))
                                                                 {
+                                                                    
                                                                     t=i;
                                                                     break;
                                                                 }
                                                             }
                                                             if(dems==3)
                                                                 break;
-                                                            if(t==0)
+                                                            if(t==-1)
                                                                 System.out.println("So tai khoan khong dung !");
-                                                        }while(t==0);
+                                                        }while(t==-1);
                                                         if(dems>=3)
                                                             throw new IllegalArgumentException("Thao tac sai qua so lan cho phep !");
                                                         else
@@ -299,12 +301,12 @@ public class baiTap{
                                                         System.out.println("lua chon khong hop le, vui long chon lai !");
                                                         break;
                                                 }
-                                                break;
                                             }while(Ch !=0);
                                             
                                         }
                                         
                                     }
+                                    break;
                                 }
                                 else
                                 {
@@ -325,7 +327,7 @@ public class baiTap{
                                         } catch (Exception e) {
                                         }
                                     }
-                                    break;
+                                    
                                 }
                                 do {
                                     System.out.println("--------------menu------------");
