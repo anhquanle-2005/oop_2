@@ -4,6 +4,8 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import KhachHang.KhachHang;
+
 public class DSPhong {
     
     private ArrayList<Phong> DSPhong;
@@ -105,7 +107,6 @@ public class DSPhong {
     }
 
 
-    
     public void ghiFilePhong(Phong pm) {
         try {
             FileWriter fw = new FileWriter("dsphong.txt", true);

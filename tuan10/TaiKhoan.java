@@ -3,7 +3,7 @@ package tuan10;
 import java.io.Serializable;
 import java.util.Scanner;
 
-public class TaiKhoan {
+public abstract class TaiKhoan {
     private String cccd;
     private int SDT;
     private String EMAIL;
