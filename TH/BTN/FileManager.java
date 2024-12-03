@@ -64,9 +64,9 @@ public class FileManager {
     
         KhachHang kh;
         if (diemThuong > 250) {
-            kh = new KhachHangVIP(matKhau, matKhau, tenTaiKhoan, tenKH, sdt, soTien, s);
+            kh = new KhachHangVIP(maKH, matKhau, tenTaiKhoan, tenKH, sdt, soTien, s);
         } else {
-            kh = new KhachHangBinhThuong(matKhau, matKhau, tenTaiKhoan, tenKH, sdt, soTien, s);
+            kh = new KhachHangBinhThuong(maKH, matKhau, tenTaiKhoan, tenKH, sdt, soTien, s);
         }
         KHACHHANG.add(kh);
         ghiFile(kh);

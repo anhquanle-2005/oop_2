@@ -9,8 +9,8 @@ public abstract class KhachHang extends TaiKhoan {
     protected int diemThuong;
     protected String loaiKhachHang;
 
-    public KhachHang(String maTK, String matKhau, String tenTaiKhoan, String tenKH, String sdt, double soTien, int diemThuong) {
-        super(maTK, matKhau, tenTaiKhoan);
+    public KhachHang(String maKH, String matKhau, String tenTaiKhoan, String tenKH, String sdt, double soTien, int diemThuong) {
+        super(maKH, matKhau, tenTaiKhoan);
         this.tenKH = tenKH;
         this.sdt = sdt;
         this.soTien = soTien;
@@ -20,7 +20,7 @@ public abstract class KhachHang extends TaiKhoan {
     }
     @Override
     public String toString() {
-        return maKH + ";" + tenTaiKhoan + ";" + tenKH + ";" + matKhau + ";" + sdt + ";" + soTien + ";" + soGioChoi + ";" + soPhutChoi + ";" + diemThuong;
+        return getMaKH() + ";" + tenTaiKhoan + ";" + tenKH + ";" + matKhau + ";" + sdt + ";" + soTien + ";" + soGioChoi + ";" + soPhutChoi + ";" + diemThuong;
     }
 
     public String getLoaiKhachHang() {
