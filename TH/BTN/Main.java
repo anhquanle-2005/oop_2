@@ -10,11 +10,11 @@ public class Main {
 
         do {
             System.out.println("-----------------");
-            System.out.println("Chọn vai trò:");
-            System.out.println("1. Nhân viên");
-            System.out.println("2. Khách hàng");
-            System.out.println("3. Thoát");
-            System.out.print("Nhập lựa chọn của bạn: ");
+            System.out.println("1. Them khach hang");
+            System.out.println("2. Xoa khach hang");
+            System.out.println("2. Dang nhap");
+            System.out.println("3. Thoat");
+            System.out.print("Nhap su lua chon cua ban: ");
             choice = scanner.nextInt();
             scanner.nextLine(); // Đọc dòng còn lại
 
