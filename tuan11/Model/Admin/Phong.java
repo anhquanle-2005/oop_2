@@ -264,6 +264,7 @@ public class Phong {
             }
         } while (!valid);
     }
+    
     @Override
     public String toString() {
         return maPhong + "," + loaiPhong + "," + phiPhong;

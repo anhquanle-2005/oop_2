@@ -62,7 +62,9 @@ public class Main {
                             chucNang=scanner.nextLine();
                             switch (chucNang) {
                                 case "1":
-                                    
+                                    System.out.println("Doi mat khau");
+                                    String mk=scanner.nextLine();
+                                    kh.doiMatKhau(mk);
                                     break;
                                 case "2":
                                     break;

@@ -9,24 +9,21 @@ public class KhachHang  {
     protected String sdt;
     protected double soTien;
     protected int soGioChoi;
-    protected int soPhutChoi;
-    protected int diemThuong;
+    protected int diem;
     protected String loaiKhachHang;
 
 
     public KhachHang() {
     }
     
-    public KhachHang(String tenKH, String maKH, String matKhau, String sdt, double soTien, int soGioChoi,
-            int soPhutChoi, int diemThuong, String loaiKhachHang) {
+    public KhachHang(String tenKH, String maKH, String matKhau, String sdt, double soTien, int soGioChoi,int diem,String loaiKhachHang) {
         this.tenKH = tenKH;
         this.maKH = maKH;
         this.matKhau = matKhau;
         this.sdt = sdt;
         this.soTien = soTien;
         this.soGioChoi = soGioChoi;
-        this.soPhutChoi = soPhutChoi;
-        this.diemThuong = diemThuong;
+        this.diem=diem;
         this.loaiKhachHang = loaiKhachHang;
     }
 
@@ -77,25 +74,15 @@ public class KhachHang  {
     public void setSoGioChoi(int soGioChoi) {
         this.soGioChoi = soGioChoi;
     }
-
-    public int getSoPhutChoi() {
-        return soPhutChoi;
-    }
-
-    public void setSoPhutChoi(int soPhutChoi) {
-        this.soPhutChoi = soPhutChoi;
-    }
-
-    public int getDiemThuong() {
-        return diemThuong;
-    }
-
-    public void setDiemThuong(int diemThuong) {
-        this.diemThuong = diemThuong;
-    }
-
     public String getLoaiKhachHang() {
         return loaiKhachHang;
+    }
+    public int getDiem() {
+        return diem;
+    }
+
+    public void setDiem(int diem) {
+        this.diem = diem;
     }
 
     public boolean kiemTraMK(String mkNhap)
@@ -196,9 +183,9 @@ public class KhachHang  {
         @Override
         public String toString() {
             return tenKH + "," + maKH + "," + matKhau + "," + sdt + ","
-                + soTien + "," + soGioChoi + "," + soPhutChoi + "," + diemThuong
-                    + "," + loaiKhachHang;
+                + soTien + "," + soGioChoi + ","+diem +"," + loaiKhachHang;
         }
+
         
     // public void napTien(double soTienNap) {
     //     if (soTienNap > 0) {

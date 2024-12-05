@@ -109,6 +109,7 @@ public class main {
                                 System.out.print("nhap vao so tai khoan cua nhan vien can xoa :");
                                 STKnv = sc.nextLine();
                                 nv.xoaNV(STKnv);
+                                // nv.ghilai();
                                 break;
                             case 5:
                                     nv.thongtinNV();

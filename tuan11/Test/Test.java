@@ -82,6 +82,8 @@ public class Test {
                                 System.out.print("nhap vao so tai khoan cua nhan vien can xoa :");
                                 STKnv = sc.nextLine();
                                 nv.xoaNV(STKnv);
+                                nv.ghilai2(STKnv);
+                                // nv.capNhatfile();
                                 break;
                             case "5":
                                 nv.thongtinNV();

@@ -1,13 +1,19 @@
 package View;
 
+
+
+
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.GridLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 import javax.swing.border.EmptyBorder;
@@ -15,12 +21,16 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import Admin.DSPhong;
 import NhanVien.DSnhanVien;
+import NhanVien.nhanVien;
+import tuan8.Anh_Quan.baiTap2.NhanVien;
 
-public class AdminView extends JFrame {
+public class XoaNhanVien extends JFrame {
     private DSPhong dsPhong;
     private DSnhanVien nv;
+    private JTextField txtMaNV;
+    private JButton btnXacNhan;
 
-    public AdminView() {
+    public XoaNhanVien() {
         this.dsPhong = new DSPhong();
         this.dsPhong.docfile();
         this.dsPhong.docfileMayTinh();
@@ -53,14 +63,14 @@ public class AdminView extends JFrame {
 
         Font buttonFont = new Font("Arial", Font.BOLD, 16);
         Color buttonTextColor = Color.WHITE;
-        Color buttonBackgroundColor = new Color(0, 102, 204);
+        Color buttonBackgroundColor = new Color(0, 102, 204); // Màu xanh
 
         UIManager.put("Button.select", new Color(132, 112, 255));
 
-        JButton themPhongMay = createStyledButton("Them phong may", buttonFont, buttonTextColor, buttonBackgroundColor);
+        JButton themPhongMay = createStyledButton("Them phong may", buttonFont, buttonTextColor, buttonBackgroundColor); // Màu tím
         JButton themMayTinh = createStyledButton("Them may tinh vao phong", buttonFont, buttonTextColor, buttonBackgroundColor);
-        JButton themNhanVien = createStyledButton("Them nhan vien moi", buttonFont, buttonTextColor, buttonBackgroundColor);
-        JButton xoaNhanVien = createStyledButton("Xoa nhan vien", buttonFont, buttonTextColor, buttonBackgroundColor);
+        JButton themNhanVien = createStyledButton("Them nhan vien moi", buttonFont, buttonTextColor,buttonBackgroundColor);
+        JButton xoaNhanVien = createStyledButton("Xoa nhan vien", buttonFont, buttonTextColor, new Color(128, 0, 128));
         JButton xemDanhSachNhanVien = createStyledButton("Xem danh sach nhan vien", buttonFont, buttonTextColor, buttonBackgroundColor);
 
         buttonPanel.add(themPhongMay);
@@ -107,40 +117,45 @@ public class AdminView extends JFrame {
         cardPanel.add(cardLabel);
         cardPanel.setBackground(Color.YELLOW);
 
+        Font font= new Font("Arial", Font.BOLD, 20);
+        JPanel inputPanel = new JPanel(new FlowLayout());
+        JLabel lblMaNV = new JLabel("Nhập mã nhân viên muốn xóa:");
+        lblMaNV.setFont(font);
+        txtMaNV = new JTextField(15); // JTextField để nhập mã phòng
+        btnXacNhan = new JButton("Xác Nhận");
+        btnXacNhan.setFocusPainted(false);
+        inputPanel.add(lblMaNV);
+        inputPanel.add(txtMaNV);
+        inputPanel.add(btnXacNhan);
+
+
         main.add(headerPanel, BorderLayout.NORTH);
-        main.add(cardPanel, BorderLayout.CENTER);
+        // main.add(cardPanel, BorderLayout.CENTER);
+        main.add(inputPanel, BorderLayout.CENTER);
         main.setBorder(new EmptyBorder(10,10,10,10));
 
         this.add(containerPanel, BorderLayout.WEST);
         this.add(main, BorderLayout.CENTER);
         this.setVisible(true);
 
-        themPhongMay.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                new ThemPhongFrame().setVisible(true);
-                AdminView.this.setVisible(false);
-            }
-        });
-
-        themNhanVien.addActionListener(new ActionListener() {
+        btnXacNhan.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e)
             {
-                new ThemNhanVien().setVisible(true);
-                AdminView.this.setVisible(false);
-            }
+                String maNV= txtMaNV.getText();
+                nhanVien n1=nv.timNhanVien(maNV);
+                if(n1!=null) 
+                {
+                    JOptionPane.showMessageDialog(null, "Đã xóa thành công nhân viên đó");
+                    nv.xoaNV(maNV);
+                    nv.ghilai2(maNV);
+                }
+                else 
+                {
+                    JOptionPane.showMessageDialog(null, "Mã nhân viên không tồn tại");
+                }
+            }            
         });
-
-        xoaNhanVien.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e)
-            {
-                new XoaNhanVien().setVisible(true);
-                AdminView.this.setVisible(false);
-            }
-        });
-
 
         xemDanhSachNhanVien.addActionListener(new ActionListener() {
             @Override
@@ -150,28 +165,39 @@ public class AdminView extends JFrame {
                 System.out.println("Nut hien thi danh sach nhan vien da duoc bam");
                 n1.setVisible(true);
                 n1.thongtinNV();
-                AdminView.this.setVisible(false);
-        
+                XoaNhanVien.this.setVisible(false);
             }
-        });
-        themMayTinh.addActionListener(new ActionListener() {
+        });       
+         themPhongMay.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new ThemPhongFrame().setVisible(true);
+                XoaNhanVien.this.setVisible(false);
+            }
+        });        
+        themNhanVien.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                new ThemNhanVien().setVisible(true);
+                XoaNhanVien.this.setVisible(false);
+            }
+        });       themMayTinh.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e)
             {
                 new ThemMayTinh().setVisible(true);
-                AdminView.this.setVisible(false);
+                XoaNhanVien.this.setVisible(false);
             }
-        });
-
-        adminButton.addActionListener(new ActionListener() {
+        });      adminButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 adminButton.setBackground(new Color(235, 0, 0));
                 new AdminView().setVisible(true);
             }
         });
-    }
 
+    }
     private JButton createStyledButton(String text, Font font, Color textColor, Color backgroundColor) {
         JButton button = new JButton(text);
         button.setFont(font);
@@ -181,8 +207,10 @@ public class AdminView extends JFrame {
         button.setBorderPainted(true);
         button.setFocusPainted(false);
         return button;
-    }    
+    }
+
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> new AdminView().setVisible(true));
+        SwingUtilities.invokeLater(() -> new XoaNhanVien().setVisible(true));
     }
 }
+

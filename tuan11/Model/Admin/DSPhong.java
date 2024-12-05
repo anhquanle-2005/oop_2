@@ -105,6 +105,12 @@ public class DSPhong {
             System.out.println("Lỗi khi thêm phòng: " + e.getMessage());
         }
     }
+    public void themPhong(Phong p)
+    {
+        DSPhong.add(p);
+        ghiFilePhong(p);
+        System.out.println("Them thanh cong");
+    }
 
 
     public void ghiFilePhong(Phong pm) {
@@ -240,6 +246,14 @@ public class DSPhong {
         }
     }
     
+    public boolean kiemTraMaPhong(String maPhong) {
+        for (Phong phong : DSPhong) {
+            if (phong.getMaPhong().equals(maPhong)) {
+                return true; // Nếu tìm thấy mã phòng, trả về true
+            }
+        }
+        return false; // Nếu không tìm thấy, trả về false
+    }
     private void hienThiThongTinPhong(Phong p) {
         System.out.println(p.getMaPhong()+" ,Phi phong: " + p.getPhiPhong());
     }

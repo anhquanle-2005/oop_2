@@ -30,6 +30,7 @@ public class DSKhachHang {
             KhachHang kh= new KhachHang();
             kh.Nhap();
             kh.setLoaiKhachHang("Khach hang binh thuong");
+            kh.setDiem(-1);
             int dem=0;
             for(KhachHang k: dsKhachHang)
                 if(k.getMaKH().equals(kh.getMaKH()))
@@ -136,7 +137,7 @@ public class DSKhachHang {
             while ((line=br.readLine())!=null) 
             {
                 String [] txt =line.split(",");
-                if(txt.length==9)
+                if(txt.length==8)
                 {
                     String tenKH=txt[0];
                     String maKH=txt[1];
@@ -146,13 +147,10 @@ public class DSKhachHang {
                     double soTien=Double.parseDouble(soTie);
                     String soGioCho=txt[5];
                     int soGioChoi=Integer.parseInt(soGioCho);
-                    String soPhu=txt[6];
-                    int soPhutChoi=Integer.parseInt(soPhu);
-                    String diem=txt[7];
+                    String diem=txt[6];
                     int soDiem=Integer.parseInt(diem);
-                    String loaiKhach=txt[8];
-                    KhachHang kh= new KhachHang(tenKH, maKH, mk ,sdt, soTien, soGioChoi, soPhutChoi,soDiem,loaiKhach);
-                    // Đây là nơi bạn cần thêm vào danh sách khách hàng
+                    String loaiKhach=txt[7];
+                    KhachHang kh= new KhachHang(tenKH, maKH, mk, sdt, soTien, soGioChoi, soDiem, loaiKhach);
                     dsKhachHang.add(kh);
                 }
             }

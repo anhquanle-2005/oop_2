@@ -1,5 +1,6 @@
 package View;
 
+
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Font;
@@ -16,11 +17,11 @@ import java.awt.event.ActionListener;
 import Admin.DSPhong;
 import NhanVien.DSnhanVien;
 
-public class AdminView extends JFrame {
+public class ThemNhanVien extends JFrame {
     private DSPhong dsPhong;
     private DSnhanVien nv;
 
-    public AdminView() {
+    public ThemNhanVien() {
         this.dsPhong = new DSPhong();
         this.dsPhong.docfile();
         this.dsPhong.docfileMayTinh();
@@ -53,13 +54,13 @@ public class AdminView extends JFrame {
 
         Font buttonFont = new Font("Arial", Font.BOLD, 16);
         Color buttonTextColor = Color.WHITE;
-        Color buttonBackgroundColor = new Color(0, 102, 204);
+        Color buttonBackgroundColor = new Color(0, 102, 204); // Màu xanh
 
         UIManager.put("Button.select", new Color(132, 112, 255));
 
-        JButton themPhongMay = createStyledButton("Them phong may", buttonFont, buttonTextColor, buttonBackgroundColor);
+        JButton themPhongMay = createStyledButton("Them phong may", buttonFont, buttonTextColor, buttonBackgroundColor); // Màu tím
         JButton themMayTinh = createStyledButton("Them may tinh vao phong", buttonFont, buttonTextColor, buttonBackgroundColor);
-        JButton themNhanVien = createStyledButton("Them nhan vien moi", buttonFont, buttonTextColor, buttonBackgroundColor);
+        JButton themNhanVien = createStyledButton("Them nhan vien moi", buttonFont, buttonTextColor,new Color(128, 0, 128));
         JButton xoaNhanVien = createStyledButton("Xoa nhan vien", buttonFont, buttonTextColor, buttonBackgroundColor);
         JButton xemDanhSachNhanVien = createStyledButton("Xem danh sach nhan vien", buttonFont, buttonTextColor, buttonBackgroundColor);
 
@@ -108,58 +109,21 @@ public class AdminView extends JFrame {
         cardPanel.setBackground(Color.YELLOW);
 
         main.add(headerPanel, BorderLayout.NORTH);
-        main.add(cardPanel, BorderLayout.CENTER);
+        // main.add(cardPanel, BorderLayout.CENTER);
         main.setBorder(new EmptyBorder(10,10,10,10));
 
         this.add(containerPanel, BorderLayout.WEST);
         this.add(main, BorderLayout.CENTER);
         this.setVisible(true);
 
-        themPhongMay.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                new ThemPhongFrame().setVisible(true);
-                AdminView.this.setVisible(false);
-            }
-        });
+        JButton them = createStyledButton("Thêm Nhân Viên", buttonFont, buttonTextColor, buttonBackgroundColor);
+        main.add(them);
 
         themNhanVien.addActionListener(new ActionListener() {
             @Override
-            public void actionPerformed(ActionEvent e)
-            {
-                new ThemNhanVien().setVisible(true);
-                AdminView.this.setVisible(false);
-            }
-        });
-
-        xoaNhanVien.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e)
-            {
-                new XoaNhanVien().setVisible(true);
-                AdminView.this.setVisible(false);
-            }
-        });
-
-
-        xemDanhSachNhanVien.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e)
-            {
-                HienThiDanhSachNV n1=new HienThiDanhSachNV();
-                System.out.println("Nut hien thi danh sach nhan vien da duoc bam");
-                n1.setVisible(true);
-                n1.thongtinNV();
-                AdminView.this.setVisible(false);
-        
-            }
-        });
-        themMayTinh.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e)
-            {
-                new ThemMayTinh().setVisible(true);
-                AdminView.this.setVisible(false);
+            public void actionPerformed(ActionEvent e) {
+                ThemNhanVienForm form = new ThemNhanVienForm();
+                form.setVisible(true); // Hiển thị form thêm nhân viên
             }
         });
 
@@ -170,6 +134,44 @@ public class AdminView extends JFrame {
                 new AdminView().setVisible(true);
             }
         });
+
+        
+        xemDanhSachNhanVien.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                HienThiDanhSachNV n1=new HienThiDanhSachNV();
+                System.out.println("Nut hien thi danh sach nhan vien da duoc bam");
+                n1.setVisible(true);
+                n1.thongtinNV();
+                ThemNhanVien.this.setVisible(false);
+            }
+        });
+        themPhongMay.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new ThemPhongFrame().setVisible(true);
+                ThemNhanVien.this.setVisible(false);
+            }
+        });
+        themMayTinh.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                new ThemMayTinh().setVisible(true);
+                ThemNhanVien.this.setVisible(false);
+            }
+        });
+        xoaNhanVien.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                new XoaNhanVien().setVisible(true);
+                ThemNhanVien.this.setVisible(false);
+            }
+        });
+
+
     }
 
     private JButton createStyledButton(String text, Font font, Color textColor, Color backgroundColor) {
@@ -181,8 +183,9 @@ public class AdminView extends JFrame {
         button.setBorderPainted(true);
         button.setFocusPainted(false);
         return button;
-    }    
+    }
+
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> new AdminView().setVisible(true));
+        SwingUtilities.invokeLater(() -> new ThemNhanVien().setVisible(true));
     }
 }
