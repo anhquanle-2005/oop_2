@@ -48,13 +48,19 @@
                         NHANVIEN.add(nvft);
                     }
                     else{
-                        nhaVienPartTime nvpt = new nhaVienPartTime(gio,ngaybd,sdt,luong,stk,mk,name);
+                        nhanVienPartTime nvpt = new nhanVienPartTime(gio,ngaybd,sdt,luong,stk,mk,name);
                         NHANVIEN.add(nvpt);
                     }
                 }
             } catch (Exception e) {
                 System.out.println("Error reading file: " + e.getMessage());
             }
+        }
+        public void themNV(nhanVien n1)
+        {
+            NHANVIEN.add(n1);
+            ghilai();
+            System.out.println("Them thanh cong");
         }
         public ArrayList<nhanVien> getNHANVIEN() {
             return NHANVIEN;
@@ -107,7 +113,7 @@
         }
         public void themNhanVienPT()
         {
-            nhaVienPartTime NVPT = new nhaVienPartTime();
+            nhanVienPartTime NVPT = new nhanVienPartTime();
             NVPT.nhap();
             int dem =0;
             for (nhanVien nv2 : NHANVIEN) {
@@ -131,6 +137,122 @@
             else
                 System.out.println("so tai khoan da ton tai !");
         }
+
+        // public void themNhanVienFullT(String stk, String ten, String sdt, double luongCB, LocalDate ngayBD){
+        //     nhanVienFullTime NVFT = new nhanVienFullTime();
+        //     int dem =0;
+        //     for (nhanVien nv : NHANVIEN) {
+        //         if(NVFT.getSTK().equals(nv.getSTK()))
+        //             dem++;
+        //     }
+        //     if(dem==0)
+        //     {
+        //         NHANVIEN.add(NVFT);
+        //         try {
+        //             FileWriter fw = new FileWriter("nhanvien.txt",true);
+        //             BufferedWriter bw = new BufferedWriter(fw);
+        //             bw.write(NVFT.toString());
+        //             bw.newLine();
+        //             bw.close();
+        //             fw.close();
+        //         } catch (Exception e) {
+        //         }
+        //         System.out.println("Them thanh cong !");
+        //     }
+        //     else
+        //         System.out.println("So tai khoan da ton tai !");
+        // }
+
+        // public void themNhanVienPartT(String stk, String ten, String sdt, double luongCB, LocalDate ngayBD)
+        // {
+        //     nhaVienPartTime NVPT = new nhaVienPartTime();
+        //     int dem =0;
+        //     for (nhanVien nv2 : NHANVIEN) {
+        //         if(NVPT.getSTK().equals(nv2.getSTK()))
+        //             dem++;
+        //     }
+        //     if(dem==0)
+        //     {
+        //         NHANVIEN.add(NVPT);
+        //         try {
+        //             FileWriter fw = new FileWriter("nhanvien.txt",true);
+        //             BufferedWriter bw = new BufferedWriter(fw);
+        //             bw.write(NVPT.toString());
+        //             bw.newLine();
+        //             bw.close();
+        //             fw.close();
+        //         } catch (Exception e) {
+        //         }
+        //         System.out.println("Them thanh cong !");
+        //     }
+        //     else
+        //         System.out.println("So tai khoan da ton tai");
+        // }
+        
+        public void themNhanVienFullT(String stk, String ten, String sdt,String mk, Double luongCB, LocalDate ngayBD) {
+            nhanVienFullTime NVFT= new nhanVienFullTime();
+            NVFT.setSTK(stk);
+            NVFT.setTenNV(ten);
+            NVFT.setSDT(sdt);
+            NVFT.setpassWord(mk);
+            NVFT.setLuongCB(luongCB);
+            NVFT.setNgayBD(ngayBD);
+            NVFT.setPhuCap();
+            int dem = 0;
+        
+            for (nhanVien nv : NHANVIEN) {
+                if (NVFT.getSTK().equals(nv.getSTK()))
+                    dem++;
+            }
+            if (dem == 0) {
+                NHANVIEN.add(NVFT);
+                try {
+                    FileWriter fw = new FileWriter("nhanvien.txt", true);
+                    BufferedWriter bw = new BufferedWriter(fw);
+                    bw.write(NVFT.toString());
+                    bw.newLine();
+                    bw.close();
+                    fw.close();
+                } catch (Exception e) {
+                    e.printStackTrace(); // In ra lỗi nếu có
+                }
+                System.out.println("Thêm thành công !");
+            } else {
+                System.out.println("Số tài khoản đã tồn tại !");
+            }
+        }
+        
+        public void themNhanVienPartT(String stk, String ten, String sdt,String mk, Double luongCB, LocalDate ngayBD) {
+            nhanVienPartTime NVPT = new nhanVienPartTime();
+            NVPT.setSTK(stk);
+            NVPT.setTenNV(ten);
+            NVPT.setSDT(sdt);
+            NVPT.setpassWord(mk);
+            NVPT.setLuongCB(luongCB);
+            NVPT.setNgayBD(ngayBD);
+            int dem = 0;
+        
+            for (nhanVien nv2 : NHANVIEN) {
+                if (NVPT.getSTK().equals(nv2.getSTK()))
+                    dem++;
+            }
+            if (dem == 0) {
+                NHANVIEN.add(NVPT);
+                try {
+                    FileWriter fw = new FileWriter("nhanvien.txt", true);
+                    BufferedWriter bw = new BufferedWriter(fw);
+                    bw.write(NVPT.toString());
+                    bw.newLine();
+                    bw.close();
+                    fw.close();
+                } catch (Exception e) {
+                    e.printStackTrace(); // In ra lỗi nếu có
+                }
+                System.out.println("Thêm thành công !");
+            } else {
+                System.out.println("Số tài khoản đã tồn tại !");
+            }
+        }
         public void xoaNV(String STK)
         {
             NHANVIEN.removeIf(nhanVien -> STK.equals(nhanVien.STK));
@@ -140,7 +262,7 @@
         public void DangNhap(String STK, String password)
         {
             for (int i = 0; i < NHANVIEN.size(); i++) {
-                if(STK.equals(NHANVIEN.get(i).STK)&&password.equals(NHANVIEN.get(i).getPassWord()))
+                if(STK.equals(NHANVIEN.get(i).STK)&&password.equals(NHANVIEN.get(i).getPassword()))
                 {
                     s=i;
                     System.out.println("Dang nhap thanh cong !");
@@ -164,7 +286,7 @@
             }
             
             else
-                System.out.println("So gio lam: "+((nhaVienPartTime) NHANVIEN.get(s)).gio);
+                System.out.println("So gio lam: "+((nhanVienPartTime) NHANVIEN.get(s)).gio);
         }
         public void doiMK()
         {
@@ -180,7 +302,7 @@
                 passcu= sc.nextLine();
                 System.out.print("nhap vao mat khau moi: ");
                 passmoi=sc.nextLine();
-                if(passcu.equals(NHANVIEN.get(s).getPassWord()))
+                if(passcu.equals(NHANVIEN.get(s).getPassword()))
                 {
                     NHANVIEN.get(s).setpassWord(passmoi);
                     System.out.println("Doi mat khau thanh cong !");
@@ -205,7 +327,7 @@
                 }
                     
                 else
-                    System.out.println("So gio lam: "+((nhaVienPartTime) nv).gio);
+                    System.out.println("So gio lam: "+((nhanVienPartTime) nv).gio);
             }
         }
 
@@ -234,9 +356,9 @@
                 {
                     if(lines.get(i).startsWith(NHANVIEN.get(s).STK))
                         if(NHANVIEN.get(i) instanceof nhanVienFullTime)
-                            line = NHANVIEN.get(s).STK+";"+NHANVIEN.get(s).tenNV+";"+NHANVIEN.get(s).getPassWord()+";"+NHANVIEN.get(s).NgayBD+";"+NHANVIEN.get(s).SDT+";"+NHANVIEN.get(s).luongCB+";"+((nhanVienFullTime)NHANVIEN.get(s)).phuCap+";"+((nhanVienFullTime)NHANVIEN.get(s)).cong+";"+"0";
+                            line = NHANVIEN.get(s).STK+";"+NHANVIEN.get(s).tenNV+";"+NHANVIEN.get(s).getPassword()+";"+NHANVIEN.get(s).NgayBD+";"+NHANVIEN.get(s).SDT+";"+NHANVIEN.get(s).luongCB+";"+((nhanVienFullTime)NHANVIEN.get(s)).phuCap+";"+((nhanVienFullTime)NHANVIEN.get(s)).cong+";"+"0";
                         else
-                            line = NHANVIEN.get(s).STK+";"+NHANVIEN.get(s).tenNV+";"+NHANVIEN.get(s).getPassWord()+";"+NHANVIEN.get(s).NgayBD+";"+NHANVIEN.get(s).SDT+";"+NHANVIEN.get(s).luongCB+";"+"0"+";"+"0"+";"+((nhaVienPartTime)NHANVIEN.get(s)).gio;
+                            line = NHANVIEN.get(s).STK+";"+NHANVIEN.get(s).tenNV+";"+NHANVIEN.get(s).getPassword()+";"+NHANVIEN.get(s).NgayBD+";"+NHANVIEN.get(s).SDT+";"+NHANVIEN.get(s).luongCB+";"+"0"+";"+"0"+";"+((nhanVienPartTime)NHANVIEN.get(s)).gio;
                     lines.set(i, line);
                     break;
                 }

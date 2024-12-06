@@ -15,7 +15,7 @@ import java.util.Scanner;
 
 public class nhanVienFullTime extends  nhanVien{
     protected double phuCap;
-    protected int cong=0;
+    protected Integer cong=0;
     public nhanVienFullTime(){}
 
     public nhanVienFullTime(double phuCap, LocalDate NgayBD, String SDT, double luongCB, String maNV, String passWord, String tenNV,int cong) {
@@ -29,6 +29,10 @@ public class nhanVienFullTime extends  nhanVien{
     }
     public void setPhuCap() {
 
+        if (NgayBD == null) {
+            throw new IllegalStateException("Ngày bắt đầu làm việc chưa được khởi tạo!");
+        }
+        
         int ngayht = LocalDate.now().getYear();
         int ngbd = NgayBD.getYear();
         if(ngayht-ngbd<3)
@@ -51,7 +55,7 @@ public class nhanVienFullTime extends  nhanVien{
         StringBuilder sb = new StringBuilder();
         sb.append(STK).append(";");
         sb.append(tenNV).append(";");
-        sb.append(getPassWord()).append(";");
+        sb.append(getPassword()).append(";");
         sb.append(NgayBD).append(";");
         sb.append(SDT).append(";");
         sb.append(luongCB).append(";");

@@ -27,6 +27,30 @@ public abstract class nhanVien implements InhanVien{
         this.tenNV = tenNV;
     }
 
+    public void setSTK(String sTK) {
+        STK = sTK;
+    }
+
+    public void setTenNV(String tenNV) {
+        this.tenNV = tenNV;
+    }
+
+    public void setPassWord(String passWord) {
+        this.passWord = passWord;
+    }
+
+    public void setNgayBD(LocalDate ngayBD) {
+        NgayBD = ngayBD;
+    }
+
+    public void setLuongCB(double luongCB) {
+        this.luongCB = luongCB;
+    }
+
+    public void setSc(Scanner sc) {
+        this.sc = sc;
+    }
+
     public String getSTK() {
         return STK;
     }
@@ -35,7 +59,7 @@ public abstract class nhanVien implements InhanVien{
         return tenNV;
     }
 
-    public String getPassWord() {
+    public String getPassword() {
         return passWord;
     }
     public void setpassWord(String passWord)
@@ -101,7 +125,6 @@ public abstract class nhanVien implements InhanVien{
            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
            NgayBD = LocalDate.parse(date,formatter);
         } catch (Exception e) {
-            // TODO: handle exception
         }
         setOTP(OTP);
     }

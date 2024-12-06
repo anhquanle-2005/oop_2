@@ -11,7 +11,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 public class ThemNhanVienForm extends JFrame {
-    private JTextField txtSTK, txtTen, txtSDT, txtLuongCB, txtDate;
+    private JTextField txtSTK, txtTen, txtSDT, txtLuongCB, txtMK,txtDate;
     private JButton btnSubmit;
     private DSnhanVien ds=new DSnhanVien();
     private JComboBox<String> cmbType;
@@ -21,7 +21,7 @@ public class ThemNhanVienForm extends JFrame {
         setSize(400, 350); // Tăng kích thước để chứa thêm trường nhập
         setLocationRelativeTo(null);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-        setLayout(new GridLayout(7, 2)); // Cập nhật số hàng
+        setLayout(new GridLayout(8, 2)); // Cập nhật số hàng
 
         // Các trường nhập liệu
         add(new JLabel("Số Tài Khoản:"));
@@ -31,6 +31,10 @@ public class ThemNhanVienForm extends JFrame {
         add(new JLabel("Tên Nhân Viên:"));
         txtTen = new JTextField();
         add(txtTen);
+
+        add(new JLabel("Mật khẩu"));
+        txtMK=new JTextField();
+        add(txtMK);
 
         add(new JLabel("Số Điện Thoại:"));
         txtSDT = new JTextField();
@@ -61,7 +65,14 @@ public class ThemNhanVienForm extends JFrame {
                 String stk = txtSTK.getText();
                 String ten = txtTen.getText();
                 String sdt = txtSDT.getText();
+                String mk = txtMK.getText(); // Lấy mật khẩu từ trường nhập
                 double luongCB;
+        
+                // Kiểm tra điều kiện mật khẩu
+                if (!isValidPassword(mk)) {
+                    JOptionPane.showMessageDialog(null, "Mật khẩu phải có ít nhất 6 ký tự, bao gồm chữ cái, số và ký tự đặc biệt!");
+                    return; // Không thực hiện nếu mật khẩu không hợp lệ
+                }
         
                 try {
                     luongCB = Double.parseDouble(txtLuongCB.getText());
@@ -82,15 +93,22 @@ public class ThemNhanVienForm extends JFrame {
         
                 // Gọi phương thức thêm nhân viên với thông tin đã nhập
                 if (cmbType.getSelectedItem().equals("Full-time")) {
-                    ds.themNhanVienFT(); // Thêm nhân viên full-time
-                } else {
-                    ds.themNhanVienPT(); // Thêm nhân viên part-time
+                    ds.themNhanVienFullT(stk,ten,sdt,mk,luongCB,ngayBD); // Thêm nhân viên full-time
+                } 
+                else {
+                    ds.themNhanVienPartT(stk,ten,sdt,mk,luongCB, ngayBD); // Thêm nhân viên part-time
                 }
         
                 JOptionPane.showMessageDialog(null, "Thêm nhân viên thành công!");
-                // Đóng cửa sổ
                 dispose();
             }
         });
     }
+        private boolean isValidPassword(String password) {
+            return password.length() >= 6 &&
+            password.matches(".*[a-zA-Z]+.*") && // Có ít nhất một chữ cái
+            password.matches(".*[0-9]+.*") && // Có ít nhất một chữ số
+            password.matches(".*[!@#$%^&*()_+\\-=\\[\\]{};':\"\\\\|,.<>\\/?]+.*"); // Có ít nhất một ký tự đặc biệt
+    }
+
 }

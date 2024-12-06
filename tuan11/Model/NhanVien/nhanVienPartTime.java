@@ -9,11 +9,11 @@ import java.nio.file.Paths;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Scanner;
-public class nhaVienPartTime extends nhanVien{
+public class nhanVienPartTime extends nhanVien{
     protected int caLam;
     protected int gio=0;
-    public nhaVienPartTime(){}
-    public nhaVienPartTime(int gio, LocalDate NgayBD, String SDT, double luongCB, String maNV, String passWord, String tenNV) {
+    public nhanVienPartTime(){}
+    public nhanVienPartTime(int gio, LocalDate NgayBD, String SDT, double luongCB, String maNV, String passWord, String tenNV) {
         super(NgayBD, SDT, luongCB, maNV, passWord, tenNV);
         this.gio = gio;
     }
@@ -138,7 +138,7 @@ public class nhaVienPartTime extends nhanVien{
         StringBuilder sb = new StringBuilder();
         sb.append(STK).append(";");
         sb.append(tenNV).append(";");
-        sb.append(getPassWord()).append(";");
+        sb.append(getPassword()).append(";");
         sb.append(NgayBD).append(";");
         sb.append(SDT).append(";");
         sb.append(luongCB).append(";");
