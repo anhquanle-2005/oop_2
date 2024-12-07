@@ -5,25 +5,24 @@ import java.util.Scanner;
 public class KhachHang  {
     protected String tenKH;
     protected String maKH;
-    protected String matKhau;
+    private String matKhau;
     protected String sdt;
     protected double soTien;
     protected int soGioChoi;
-    protected int diem;
+    protected  Scanner sc;
     protected String loaiKhachHang;
 
 
     public KhachHang() {
     }
     
-    public KhachHang(String tenKH, String maKH, String matKhau, String sdt, double soTien, int soGioChoi,int diem,String loaiKhachHang) {
+    public KhachHang(String tenKH, String maKH, String matKhau, String sdt, double soTien, int soGioChoi, String loaiKhachHang) {
         this.tenKH = tenKH;
         this.maKH = maKH;
         this.matKhau = matKhau;
         this.sdt = sdt;
         this.soTien = soTien;
         this.soGioChoi = soGioChoi;
-        this.diem=diem;
         this.loaiKhachHang = loaiKhachHang;
     }
 
@@ -74,15 +73,9 @@ public class KhachHang  {
     public void setSoGioChoi(int soGioChoi) {
         this.soGioChoi = soGioChoi;
     }
+
     public String getLoaiKhachHang() {
         return loaiKhachHang;
-    }
-    public int getDiem() {
-        return diem;
-    }
-
-    public void setDiem(int diem) {
-        this.diem = diem;
     }
 
     public boolean kiemTraMK(String mkNhap)
@@ -92,11 +85,7 @@ public class KhachHang  {
     public void setLoaiKhachHang(String loaiKhachHang) {
         this.loaiKhachHang = loaiKhachHang;
     }
-    public void doiMatKhau(String mk)
-    {
-        if(kiemTraDoManhMatKhau(mk))
-            this.setMatKhau(mk);
-    }
+
     public boolean kiemTraDoManhMatKhau(String matKhau) {
         return matKhau.length() >= 6 &&
                 matKhau.matches(".*[a-zA-Z]+.*") &&
@@ -123,7 +112,7 @@ public class KhachHang  {
     }
     public void Nhap()
     {
-        Scanner sc = new Scanner(System.in);
+        sc = new Scanner(System.in);
         while (true) {
             System.out.println("Nhap vao ten cua khach hang: ");
             this.tenKH = sc.nextLine();
@@ -172,21 +161,20 @@ public class KhachHang  {
         
         public void thanhToan(Double x)
         {
-            if (x > 5000) {
-                this.setSoTien(this.getSoTien()-x);
-                System.out.println("Thanh toan thanh cong! So du hien tai: " + this.getSoTien());
-            } else {
-                System.out.println("So tien gui khong hop le.");
-            }
-        }
+            // if (x > 5000) {
+            //     this.setSoTien(this.getSoTien()-x);
+            //     System.out.println("Thanh toan thanh cong! So du hien tai: " + this.getSoTien());
+            // } else {
+            //     System.out.println("So tien gui khong hop le.");
+            // }
 
+        }
         @Override
         public String toString() {
             return tenKH + "," + maKH + "," + matKhau + "," + sdt + ","
-                + soTien + "," + soGioChoi + ","+diem +"," + loaiKhachHang;
+                + soTien + "," + soGioChoi + ","  + loaiKhachHang+","+"0";
         }
-
-        
+     
     // public void napTien(double soTienNap) {
     //     if (soTienNap > 0) {
     //         this.soTien += soTienNap;
@@ -202,4 +190,5 @@ public class KhachHang  {
     // public String getThoiGianChoi() {
     //     return soGioChoi + " giờ " + soPhutChoi + " phút";
     // }
+
 }

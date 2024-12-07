@@ -114,7 +114,7 @@ public class HienThiDanhSachNV extends JFrame {
         JPanel tablePanel = new JPanel(new BorderLayout());
 
         // Tạo bảng hiển thị nhân viên
-        String[] columnNames = {"STK", "Tên Nhân Viên", "Số Điện Thoại", "Lương Cơ Bản", "Lương"};
+        String[] columnNames = {"STK", "Tên Nhân Viên", "Số Điện Thoại", "Lương Cơ Bản", "Phụ cấp"};
         model = new DefaultTableModel(columnNames, 0);
         table = new JTable(model);
         JScrollPane scrollPane = new JScrollPane(table);
