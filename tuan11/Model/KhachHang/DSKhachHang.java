@@ -64,35 +64,35 @@ public class DSKhachHang {
         }
     }
 
-    public KhachHang dangNhap()
-    {
-        System.out.println("Nhap ma cua khach hang: ");
-        String maKH= sc.nextLine();
-        KhachHang kh= timKhachHang(maKH);
-        if(kh==null)
-        {
-            System.out.println("May la ai?");
-            return null;
-        }
-        int thu=0;
-        while (thu<3) {
-            System.out.println("Nhap vao mat khau: ");
-            String mk= sc.nextLine();
-            if(kh.kiemTraMK(mk))
-                return kh;
-            else 
-            {
-                thu++;
-                System.out.println("Mat khau sai. Ban con "+(3-thu)+" lan thu");
-            }
-        }
+    // public KhachHang dangNhap()
+    // {
+    //     System.out.println("Nhap ma cua khach hang: ");
+    //     String maKH= sc.nextLine();
+    //     KhachHang kh= timKhachHang(maKH);
+    //     if(kh==null)
+    //     {
+    //         System.out.println("May la ai?");
+    //         return null;
+    //     }
+    //     int thu=0;
+    //     while (thu<3) {
+    //         System.out.println("Nhap vao mat khau: ");
+    //         String mk= sc.nextLine();
+    //         if(kh.kiemTraMK(mk))
+    //             return kh;
+    //         else 
+    //         {
+    //             thu++;
+    //             System.out.println("Mat khau sai. Ban con "+(3-thu)+" lan thu");
+    //         }
+    //     }
 
-        System.out.println("Ban nhap sai qua 3 lan. Ban quen mat khau, co muon khoi phuc (Y|N)");
-        String luaChon=sc.nextLine();
-        if(luaChon.equalsIgnoreCase("Y"))
-            quenMatKhau(kh);
-        return null;
-    }
+    //     System.out.println("Ban nhap sai qua 3 lan. Ban quen mat khau, co muon khoi phuc (Y|N)");
+    //     String luaChon=sc.nextLine();
+    //     if(luaChon.equalsIgnoreCase("Y"))
+    //         quenMatKhau(kh);
+    //     return null;
+    // }
 
     public void quenMatKhau(KhachHang kh)
     {

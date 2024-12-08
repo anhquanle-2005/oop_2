@@ -129,7 +129,7 @@ public class Test {
                                     if(tg == 3)
                                         break;
                                 } while (true);
-                            if(tg>=3)
+                            if(tg>3 && nv.s==-1)
                             {
                                     int Ch;
                                     System.out.println("--------------menu------------");
@@ -161,7 +161,7 @@ public class Test {
                                     System.out.println("| 6. Them khach hang                   |");
                                     System.out.println("| 7. Xoa khach hang                    |");
                                     System.out.println("| 8. Xem dan sach khach hang           |");
-                                    System.out.println("| 9. Them Game                        |");
+                                    System.out.println("| 9. Them Game                         |");
                                     System.out.println("| 10. Xoa game                         |");
                                     System.out.println("| 11. Danh sach game                   |");
                                     System.out.println("| 12. Cham cong                        |");
@@ -307,7 +307,7 @@ public class Test {
                                     if(tg == 3)
                                         break;
                                 } while (true);
-                                if(tg>=3)
+                                if(tg>3 && kh.b==-1)
                                 {
                                     int Ch;
                                     System.out.println("--------------menu------------");
@@ -365,6 +365,7 @@ public class Test {
                                                 break;
                                             case "2":
                                                 kh.doimk();
+                                                kh.capNhatFileKh();
                                                 break;
                                             case "3":
                                                 kh.napTien();
@@ -396,6 +397,7 @@ public class Test {
                                                 // System.out.println("Phi phong: "+);
                                             case "9":
                                                 kh.DKVIP();
+                                                kh.capNhatFileKh();
                                                 break;
                                             case"0":
                                                 if(kh.ktrasodu())

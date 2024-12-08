@@ -47,40 +47,40 @@ public class Main {
                     }
                     break;
                 case"5":
-                    KhachHang kh= ds.dangNhap();
-                    if(kh!=null)
-                    {
-                        System.out.println("Dang nhap thanh cong");
-                        String chucNang;
-                        do {
-                            System.out.println("1. Doi mat khau");
-                            System.out.println("2. Nap tien vao tai khoan");
-                            System.out.println("3. Thanh toan");
-                            System.out.println("4. Danh sach game");
-                            System.out.println("5. Ban co muon nang tai khoan len VIP");
-                            System.out.println("6. Thoat");
-                            chucNang=scanner.nextLine();
-                            switch (chucNang) {
-                                case "1":
+                    // KhachHang kh= ds.dangNhap();
+                    // if(kh!=null)
+                    // {
+                    //     System.out.println("Dang nhap thanh cong");
+                    //     String chucNang;
+                    //     do {
+                    //         System.out.println("1. Doi mat khau");
+                    //         System.out.println("2. Nap tien vao tai khoan");
+                    //         System.out.println("3. Thanh toan");
+                    //         System.out.println("4. Danh sach game");
+                    //         System.out.println("5. Ban co muon nang tai khoan len VIP");
+                    //         System.out.println("6. Thoat");
+                    //         chucNang=scanner.nextLine();
+                    //         switch (chucNang) {
+                    //             case "1":
                                     
-                                    break;
-                                case "2":
-                                    break;
-                                case "3":
-                                    break;
-                                case "4":
-                                    break;
-                                case "5":
-                                    break;
-                                case"6":
-                                    break;
-                                default:
-                                    System.out.println("Lua chon khong hop le");
-                                    break;
-                            }
-                        } while (!chucNang.equals("6"));
-                    }
-                    break;
+                    //                 break;
+                    //             case "2":
+                    //                 break;
+                    //             case "3":
+                    //                 break;
+                    //             case "4":
+                    //                 break;
+                    //             case "5":
+                    //                 break;
+                    //             case"6":
+                    //                 break;
+                    //             default:
+                    //                 System.out.println("Lua chon khong hop le");
+                    //                 break;
+                    //         }
+                    //     } while (!chucNang.equals("6"));
+                    // }
+                    // break;
                 case"6":
                     System.out.println("Ban da thoat chuong trinh");
                     break;

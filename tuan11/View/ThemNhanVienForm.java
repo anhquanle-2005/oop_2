@@ -93,13 +93,15 @@ public class ThemNhanVienForm extends JFrame {
         
                 // Gọi phương thức thêm nhân viên với thông tin đã nhập
                 if (cmbType.getSelectedItem().equals("Full-time")) {
-                    ds.themNhanVienFullT(stk,ten,sdt,mk,luongCB,ngayBD); // Thêm nhân viên full-time
+                    ds.themNhanVienFullT(stk,ten,sdt,mk,luongCB,ngayBD);
+                  
+                    // Thêm nhân viên full-time
                 } 
                 else {
-                    ds.themNhanVienPartT(stk,ten,sdt,mk,luongCB, ngayBD); // Thêm nhân viên part-time
+                    ds.themNhanVienPartT(stk,ten,sdt,mk,luongCB, ngayBD);
+                  
                 }
-        
-                JOptionPane.showMessageDialog(null, "Thêm nhân viên thành công!");
+                
                 dispose();
             }
         });

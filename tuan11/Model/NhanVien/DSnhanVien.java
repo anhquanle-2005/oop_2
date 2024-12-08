@@ -13,9 +13,13 @@
     import java.util.ArrayList;
     import java.util.List;
     import java.util.Scanner;
+    
+    import javax.swing.JOptionPane;
 
     public class DSnhanVien {
         protected ArrayList<nhanVien> NHANVIEN ;
+        protected int demtime=0;
+        protected int seconds =0;
         public int s =-1;
         protected Scanner sc;
 
@@ -138,56 +142,6 @@
                 System.out.println("so tai khoan da ton tai !");
         }
 
-        // public void themNhanVienFullT(String stk, String ten, String sdt, double luongCB, LocalDate ngayBD){
-        //     nhanVienFullTime NVFT = new nhanVienFullTime();
-        //     int dem =0;
-        //     for (nhanVien nv : NHANVIEN) {
-        //         if(NVFT.getSTK().equals(nv.getSTK()))
-        //             dem++;
-        //     }
-        //     if(dem==0)
-        //     {
-        //         NHANVIEN.add(NVFT);
-        //         try {
-        //             FileWriter fw = new FileWriter("nhanvien.txt",true);
-        //             BufferedWriter bw = new BufferedWriter(fw);
-        //             bw.write(NVFT.toString());
-        //             bw.newLine();
-        //             bw.close();
-        //             fw.close();
-        //         } catch (Exception e) {
-        //         }
-        //         System.out.println("Them thanh cong !");
-        //     }
-        //     else
-        //         System.out.println("So tai khoan da ton tai !");
-        // }
-
-        // public void themNhanVienPartT(String stk, String ten, String sdt, double luongCB, LocalDate ngayBD)
-        // {
-        //     nhaVienPartTime NVPT = new nhaVienPartTime();
-        //     int dem =0;
-        //     for (nhanVien nv2 : NHANVIEN) {
-        //         if(NVPT.getSTK().equals(nv2.getSTK()))
-        //             dem++;
-        //     }
-        //     if(dem==0)
-        //     {
-        //         NHANVIEN.add(NVPT);
-        //         try {
-        //             FileWriter fw = new FileWriter("nhanvien.txt",true);
-        //             BufferedWriter bw = new BufferedWriter(fw);
-        //             bw.write(NVPT.toString());
-        //             bw.newLine();
-        //             bw.close();
-        //             fw.close();
-        //         } catch (Exception e) {
-        //         }
-        //         System.out.println("Them thanh cong !");
-        //     }
-        //     else
-        //         System.out.println("So tai khoan da ton tai");
-        // }
         
         public void themNhanVienFullT(String stk, String ten, String sdt,String mk, Double luongCB, LocalDate ngayBD) {
             nhanVienFullTime NVFT= new nhanVienFullTime();
@@ -216,9 +170,11 @@
                 } catch (Exception e) {
                     e.printStackTrace(); // In ra lỗi nếu có
                 }
-                System.out.println("Thêm thành công !");
+                System.out.println("Them cach cong !");
+                JOptionPane.showMessageDialog(null, "Thêm nhân viên thành công!"); // Thêm nhân viên part-time
             } else {
                 System.out.println("Số tài khoản đã tồn tại !");
+                JOptionPane.showMessageDialog(null, "Them khong thanh cong!");
             }
         }
         
@@ -248,7 +204,8 @@
                 } catch (Exception e) {
                     e.printStackTrace(); // In ra lỗi nếu có
                 }
-                System.out.println("Thêm thành công !");
+                System.out.println("Them thanh cong !");
+                JOptionPane.showMessageDialog(null, "Thêm nhân viên thành công!"); // Thêm nhân viên part-time
             } else {
                 System.out.println("Số tài khoản đã tồn tại !");
             }
@@ -339,10 +296,99 @@
             return null;
         }
         
+        // public void quenpass()
+        // {
+        //     NHANVIEN.get(s).quenpass();
+        // }
         public void quenpass()
-        {
-            NHANVIEN.get(s).quenpass();
+    {
+        sc = new Scanner(System.in);
+        String stk;
+        int a=-1;
+        System.out.print("Nhap vao so tai khoan: ");
+        stk = sc.nextLine();
+        for (int i = 0; i < NHANVIEN.size(); i++) {
+            if(NHANVIEN.get(i).STK.equals(stk))
+            {
+                a=i;
+                break;
+            }  
         }
+        if(a!=-1)
+        {
+            String passWord;
+            String sdt;
+            int dem=0,dem1=0;
+            int otp;
+            System.out.print("thiet lap mat khau moi :");
+            passWord = sc.nextLine();
+            System.out.print("Nhap vao so dien thoai: ");
+            sdt=sc.nextLine();
+            while(!sdt.equals(NHANVIEN.get(a).SDT))
+            {
+                dem++;
+                System.out.print("Nhap vao so dien thoai: ");
+                sdt=sc.nextLine();
+                if(dem ==3)
+                    break;
+            }
+            if(dem>=3)
+            {
+                demtime++;
+                if(demtime == 3)
+                    throw new IllegalArgumentException("thao tac sai qua nhieu lan !");
+                 seconds = seconds+5; // Số giây bạn muốn đếm
+                for (int i = seconds; i >= 0; i--) {
+                    System.out.println("Thoi gian con lai: " + i + " giây");
+                    try {
+                        Thread.sleep(1000); // Tạm dừng 1000ms (1 giây)
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+                
+                quenpass();
+            }
+            System.out.println(NHANVIEN.get(a).getOTP());
+            System.out.print("nhap vao OTP: ");
+            otp=sc.nextInt();
+            sc.nextLine();
+            while(otp!=NHANVIEN.get(a).OTP)
+            {
+                dem1++;
+                System.out.print("nhap vao OTP: ");
+                otp=sc.nextInt();
+                sc.nextLine();
+                if(dem1==3)
+                    break;
+            }
+            if(dem1>=3)
+                throw new IllegalArgumentException("thao tac sai qua so lan cho phep !");
+                NHANVIEN.get(a).setpassWord(passWord);
+            System.out.println("Doi mat khau thanh cong !");
+            try {
+                List<String> lines = readAllLines(Paths.get("nhanvien.txt"));
+                String line=null;
+                for(int i =0;i<lines.size();i++)
+                {
+                    if(lines.get(i).startsWith(NHANVIEN.get(a).STK))
+                        if(NHANVIEN.get(i) instanceof nhanVienFullTime)
+                            line = NHANVIEN.get(a).STK+";"+NHANVIEN.get(a).tenNV+";"+NHANVIEN.get(a).getPassword()+";"+NHANVIEN.get(a).NgayBD+";"+NHANVIEN.get(a).SDT+";"+NHANVIEN.get(a).luongCB+";"+((nhanVienFullTime)NHANVIEN.get(a)).phuCap+";"+((nhanVienFullTime)NHANVIEN.get(a)).cong+";"+"0";
+                        else
+                            line = NHANVIEN.get(a).STK+";"+NHANVIEN.get(a).tenNV+";"+NHANVIEN.get(a).getPassword()+";"+NHANVIEN.get(a).NgayBD+";"+NHANVIEN.get(a).SDT+";"+NHANVIEN.get(a).luongCB+";"+"0"+";"+"0"+";"+((nhanVienPartTime)NHANVIEN.get(a)).gio;
+                        lines.set(i, line);
+                        break;
+                    }
+                    Files.write(Paths.get("nhanvien.txt"),lines);
+                    
+                } catch (Exception e) {
+                    System.err.println("Lỗi khi xử lý file: " + e.getMessage());
+                }
+            }
+            else
+            System.out.println("Tai khoan khong ton tai !");
+        }
+
         public void chamconglam()
         {
             NHANVIEN.get(s).chamCong();

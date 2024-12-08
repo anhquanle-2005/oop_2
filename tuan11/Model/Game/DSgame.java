@@ -64,7 +64,7 @@ public class DSgame {
         }
         return -1;
     }
-    public void dsGameDaThue(){}
+    // public void dsGameDaThue(){}
     public void chonGame(String maGame)
     {
         int s;
