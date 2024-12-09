@@ -1,19 +1,26 @@
 package Test;
 
-import java.util.Scanner;
-
 import Admin.DSPhong;
-import NhanVien.DSnhanVien;
-import Admin.MayTinh;
 import Admin.Phong;
+import Game.DSgame;
+import KhachHang.DSKhachHang;
+import NhanVien.DSnhanVien;
+import View.AdminView;
+
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Scanner;
 
 public class Test {
     public static void main(String[] args) {
+
         Scanner sc = new Scanner(System.in);
         DSPhong dsPhong= new DSPhong();
         dsPhong.docfile();
         dsPhong.docfileMayTinh();
         DSnhanVien nv= new DSnhanVien();
+        DSKhachHang kh = new DSKhachHang();
+        DSgame game = new DSgame();
         String luaChon;
         do {
             System.out.println("1. Admin");
@@ -23,74 +30,76 @@ public class Test {
             luaChon=sc.nextLine();
             switch (luaChon) {
                 case "1":
-                    String choice;
-                    System.out.println("Admin");
-                    do {
-                        System.out.println("------------------MENU------------------");
-                        System.out.println("| 1. Them phong may                    |");
-                        System.out.println("| 2. Them may tinh vao phong           |");
-                        System.out.println("| 3. Them nhan vien                    |");
-                        System.out.println("| 4. Xoa nhan vien                     |");
-                        System.out.println("| 5. Xem danh sach nhan vien           |");
-                        System.out.println("| 0. Thoat                             |");
-                        System.out.println("------------------MENU------------------");
-                        System.out.print("Nhap vao lua chon: ");
-                        choice=sc.nextLine();
-                        switch (choice) {
-                            case "1":
-                                dsPhong.themPhong();
-                                break;
-                            case "2":
-                                System.out.print("Nhap ma phong muon them may tinh: ");
-                                String maPhong = sc.nextLine();
-                                Admin.Phong phong = dsPhong.timPhong(maPhong);
-                                if (phong != null){
-                                    phong.themMayTinh();
-                                    dsPhong.capNhatfile();
-                                }
-                                else 
-                                    System.out.println("Khong tim thay phong voi ma: " + maPhong);
-                                break;
-                            case "3":
-                            int LCH;
-                            do { 
-                                System.out.println("--------------MENU--------------");
-                                System.out.println("| 1. Them nhan vien full time  |");
-                                System.out.println("| 2. Them nhan vien part time  |");
-                                System.out.println("| 0. Thoat                     |");
-                                System.out.println("--------------MENU--------------");
-                                System.out.print("nhap vao lua chon: ");
-                                LCH = sc.nextInt();
-                                sc.nextLine();
-                                switch (LCH) {
-                                    case 1:
-                                        nv.themNhanVienFT();
-                                        break;
-                                    case 2:
-                                        nv.themNhanVienPT();
-                                        break;
-                                    case 0:
-                                        System.out.println("Thoat chuong trinh !");
-                                        break;
-                                    default:
-                                        System.out.println("lua chon khong hop le !");
-                                }
-                            }while (LCH!=0);
-                            break;
-                            case "4":
-                                String STKnv;
-                                System.out.print("nhap vao so tai khoan cua nhan vien can xoa :");
-                                STKnv = sc.nextLine();
-                                nv.xoaNV(STKnv);
-                                break;
-                            case "5":
-                                nv.thongtinNV();
-                                break;
-                            default:
-                                System.out.println("Lua chon khong hop le");
-                                break;
-                        }
-                    } while (!choice.equals("0"));
+                    // String choice;
+                    // System.out.println("Admin");
+                    // do {
+                    //     System.out.println("------------------MENU------------------");
+                    //     System.out.println("| 1. Them phong may                    |");
+                    //     System.out.println("| 2. Them may tinh vao phong           |");
+                    //     System.out.println("| 3. Them nhan vien                    |");
+                    //     System.out.println("| 4. Xoa nhan vien                     |");
+                    //     System.out.println("| 5. Xem danh sach nhan vien           |");
+                    //     System.out.println("| 0. Thoat                             |");
+                    //     System.out.println("------------------MENU------------------");
+                    //     System.out.print("Nhap vao lua chon: ");
+                    //     choice=sc.nextLine();
+                    //     switch (choice) {
+                    //         case "1":
+                    //             dsPhong.themPhong();
+                    //             break;
+                    //         case "2":
+                    //             System.out.print("Nhap ma phong muon them may tinh: ");
+                    //             String maPhong = sc.nextLine();
+                    //             Admin.Phong phong = dsPhong.timPhong(maPhong);
+                    //             if (phong != null){
+                    //                 phong.themMayTinh();
+                    //                 dsPhong.capNhatfile();
+                    //             }
+                    //             else 
+                    //                 System.out.println("Khong tim thay phong voi ma: " + maPhong);
+                    //             break;
+                    //         case "3":
+                    //         int LCH;
+                    //         do { 
+                    //             System.out.println("--------------MENU--------------");
+                    //             System.out.println("| 1. Them nhan vien full time  |");
+                    //             System.out.println("| 2. Them nhan vien part time  |");
+                    //             System.out.println("| 0. Thoat                     |");
+                    //             System.out.println("--------------MENU--------------");
+                    //             System.out.print("nhap vao lua chon: ");
+                    //             LCH = sc.nextInt();
+                    //             sc.nextLine();
+                    //             switch (LCH) {
+                    //                 case 1:
+                    //                     nv.themNhanVienFT();
+                    //                     break;
+                    //                 case 2:
+                    //                     nv.themNhanVienPT();
+                    //                     break;
+                    //                 case 0:
+                    //                     System.out.println("Thoat chuong trinh !");
+                    //                     break;
+                    //                 default:
+                    //                     System.out.println("lua chon khong hop le !");
+                    //             }
+                    //         }while (LCH!=0);
+                    //         break;
+                    //         case "4":
+                    //             String STKnv;
+                    //             System.out.print("nhap vao so tai khoan cua nhan vien can xoa :");
+                    //             STKnv = sc.nextLine();
+                    //             nv.xoaNV(STKnv);
+                    //             nv.ghilai();
+                    //             break;
+                    //         case "5":
+                    //             nv.thongtinNV();
+                    //             break;
+                    //         default:
+                    //             System.out.println("Lua chon khong hop le");
+                    //             break;
+                    //     }
+                    // } while (!choice.equals("0"));
+                    new AdminView();
                     break;
                 case "2":
                     String lc;
@@ -120,7 +129,7 @@ public class Test {
                                     if(tg == 3)
                                         break;
                                 } while (true);
-                            if(tg>=3)
+                            if(tg>3 && nv.s==-1)
                             {
                                     int Ch;
                                     System.out.println("--------------menu------------");
@@ -148,9 +157,14 @@ public class Test {
                                     System.out.println("| 2. Doi mat khau                      |");
                                     System.out.println("| 3. Hien thi danh sach phong          |");
                                     System.out.println("| 4. Cap nhat trang thai may tinh      |");
-                                    System.out.println("| 5. Chon phong                        |");
-                                    System.out.println("| 6. Hien thi thong tin may o phong    |");
-                                    System.out.println("| 7. Cham cong                         |");
+                                    System.out.println("| 5. Hien thi thong tin may o phong    |");
+                                    System.out.println("| 6. Them khach hang                   |");
+                                    System.out.println("| 7. Xoa khach hang                    |");
+                                    System.out.println("| 8. Xem dan sach khach hang           |");
+                                    System.out.println("| 9. Them Game                         |");
+                                    System.out.println("| 10. Xoa game                         |");
+                                    System.out.println("| 11. Danh sach game                   |");
+                                    System.out.println("| 12. Cham cong                        |");
                                     System.out.println("| 0. Dang xuat                         |");
                                     System.out.println("------------------MENU------------------");
                                     System.out.print("Nhap vao lua chon: ");
@@ -161,6 +175,7 @@ public class Test {
                                             break;
                                         case "2":
                                             nv.doiMK();
+                                            nv.ghilai();
                                             break;
                                         case "3":
                                             dsPhong.hienThiDSPhong();
@@ -200,98 +215,7 @@ public class Test {
                                                 System.out.println("Khong tim thay phong voi ma: " + maP);
                                             }
                                             break;
-                                        case "5":
-                                            System.out.println("Ban muon cho loai phong nao");
-                                            System.out.println("phong Don || phong Doi || phong Vip || phong Thi Dau");
-                                            System.out.println("Loai phong ban muon choi: ");
-                                            String loaiPhong= sc.nextLine();
-                                            switch (loaiPhong) {
-                                                case "phong Don":
-                                                    dsPhong.hienThiDSPhong(loaiPhong);
-                                                    System.out.println("Chon phong: ");
-                                                    String mp2= sc.nextLine();
-                                                    Phong p1=dsPhong.timPhong(mp2);
-                                                    if(p1!=null)
-                                                    {
-                                                        p1.hienThiDanhSachMayTinh();
-                                                        System.out.println("Chon may ban muon choi: ");
-                                                        String maMay=sc.nextLine();
-                                                        Admin.MayTinh m1=p1.timMayTinh(maMay);
-                                                        if(m1!=null)
-                                                        {
-                                                            m1.setTrangThai("Da dat");
-                                                            p1.capNhatTrangThaiMay(m1);
-                                                            dsPhong.capNhatfile();
-                                                        }
-                    
-                                                        else 
-                                                            System.out.println("May da duoc dat || bao tri");
-                                                    }
-                                                    break;
-                                                case "phong Doi":
-                                                    dsPhong.hienThiDSPhong(loaiPhong);
-                                                    System.out.println("Chon phong: ");
-                                                    String mp3= sc.nextLine();
-                                                    Phong p2=dsPhong.timPhong(mp3);
-                                                    if(p2!=null)
-                                                    {
-                                                        p2.hienThiDanhSachMayTinh();
-                                                        System.out.println("Chon may ban muon choi: ");
-                                                        String maMay=sc.nextLine();
-                                                        Admin.MayTinh m1=p2.timMayTinh(maMay);
-                                                        if(m1!=null)
-                                                        {
-                                                            m1.setTrangThai("Da dat");
-                                                            p2.capNhatFileMayTinh();
-                                                            dsPhong.capNhatfile();
-                                                        }
-                                                        else 
-                                                            System.out.println("May da duoc dat || bao tri");
-                                                    }
-                                                    break;
-                                                case "phong Vip":
-                                                    dsPhong.hienThiDSPhong(loaiPhong);
-                                                    System.out.println("Chon phong: ");
-                                                    String mp4= sc.nextLine();
-                                                    Phong p3=dsPhong.timPhong(mp4);
-                                                    if(p3!=null)
-                                                    {
-                                                        p3.hienThiDanhSachMayTinh();
-                                                        System.out.println("Chon may ban muon choi: ");
-                                                        String maMay=sc.nextLine();
-                                                        Admin.MayTinh m1=p3.timMayTinh(maMay);
-                                                        if(m1!=null)
-                                                        {
-                                                            m1.setTrangThai("Da dat");
-                                                            p3.capNhatFileMayTinh();
-                                                            dsPhong.capNhatfile();
-                                                        }
-                                                        else 
-                                                            System.out.println("May da duoc dat || bao tri");
-                                                    }
-                                                    break;
-                                                case "phong Thi Dau":
-                                                    dsPhong.hienThiDSPhong(loaiPhong);
-                                                    System.out.println("Chon phong: ");
-                                                    String mp5= sc.nextLine();
-                                                    Phong p4=dsPhong.timPhong(mp5);
-                                                    if(p4!=null)
-                                                    {
-                                                        p4.hienThiDanhSachMayTinh();
-                                                        for(Admin.MayTinh mt: p4.getDSMAYTINH())
-                                                        {
-                                                            mt.setTrangThai("Da dat");
-                                                            p4.capNhatFileMayTinh();
-                                                            dsPhong.capNhatfile();
-                                                        }
-                                                    }
-                                                    break;
-                                                default:
-                                                    System.out.println("Lua chon khong hop le");
-                                                    break;
-                                            }
-                                            break;
-                                        case "6":
+                                            case "5":
                                             System.out.println("Ma phong ban muon kiem tra: ");
                                             String Phong =sc.nextLine();
                                             Phong p1 = dsPhong.timPhong(Phong);
@@ -303,10 +227,38 @@ public class Test {
                                             else 
                                                 System.out.println("Khong co ma phong "+Phong);
                                             break;
+                                        case "6":
+                                            kh.themKhach();
+                                            break;
                                         case "7":
+                                            String ma;
+                                            System.out.println("Nhap vao ma khach hang ban muon xoa:");
+                                            ma=sc.nextLine();
+                                            kh.xoaKhachHang(ma);
+                                            break;
+                                        case "8":
+                                            kh.hienThiDSKH();
+                                            break;
+                                        case "9":   
+                                            kh.themGame();
+                                            break;
+                                        case "10":
+                                            String magame;
+                                            kh.dsgame();
+                                            System.out.print("Nhap vao ma game can xoa: ");
+                                            magame = sc.nextLine();
+                                            kh.xoaGame(magame);
+                                            break;
+                                        case "11":
+                                            System.out.println("--------------------------DSGAME--------------------------");
+                                            kh.dsgame();
+                                            System.out.println("--------------------------DSGAME--------------------------");
+                                            break;
+                                        case "12":
                                             nv.chamconglam();
                                             nv.ghilai();
                                             break;
+
                                         case "0":
                                             System.out.println("Dang xuat !");
                                             break;
@@ -316,6 +268,7 @@ public class Test {
                                     }
                                 } while (!luaCh.equals("0"));
                             }
+                        
                         case "0":
                             System.out.println("Thoat !");
                             break;
@@ -324,6 +277,153 @@ public class Test {
                             break;
                         }
                     }while (!lc.equals("0"));
+                    break;
+                case "3":
+                    String a;
+                    do
+                    {
+                        System.out.println("-------------MENU--------------");
+                        System.out.println("| 1. Dang nhap                |");
+                        System.out.println("| 0. Thoat !                  |");
+                        System.out.println("-------------MENU--------------");
+                        System.out.print("Nhap vao lua chon: ");
+                        a=sc.nextLine();
+                        switch (a) {
+                            case "1":
+                                String STK1, MK;
+                                int tg = 0,dem=0;
+                                do { 
+                                    
+                                    if(tg!=0)
+                                        System.out.println("So tai khoan hoac mat khau khong dung !");
+                                    tg++;
+                                    System.out.print("Nhap vao so tai khoan: ");
+                                    STK1 = sc.nextLine();
+                                    System.out.print("Nhap vao mat khau: ");
+                                    MK= sc.nextLine();
+                                    kh.dn(STK1, MK);
+                                    if(kh.b!=-1) 
+                                        break;
+                                    if(tg == 3)
+                                        break;
+                                } while (true);
+                                if(tg>3 && kh.b==-1)
+                                {
+                                    int Ch;
+                                    System.out.println("--------------menu------------");
+                                    System.out.println("| 1. Quen mat khau           |");
+                                    System.out.println("| 0. Thoat                   |");
+                                    System.out.println("--------------menu------------");
+                                    System.out.print("nhap vao lua chon: ");
+                                    Ch = sc.nextInt();
+                                    sc.nextLine();
+                                    switch (Ch) {
+                                        case 1:
+                                            String stk;
+                                            int d=0;
+                                            do {
+                                                if(d!=0)
+                                                    System.out.println("So tai khoan khong ton tai !");
+                                                d++;
+                                                System.out.println("Nhap vao so tai khoan:");
+                                                stk = sc.nextLine();
+                                                if(d>=3)
+                                                    break;
+                                            } while (kh.timKhachHang(stk)==null);
+                                            if(d>=3)
+                                                throw new IllegalArgumentException("loi");
+                                            else
+                                                kh.quenMatKhau(kh.timKhachHang(stk));
+                                            break;
+                                           
+                                        default:
+                                            System.out.println("Thoat chuong trinh !");
+                                    }
+                                }
+                                else
+                                {
+                                    String ch;
+                                    do { 
+                                        System.out.println("------------------MENU------------------");
+                                        System.out.println("| 1. Xem thong tin ca nnhan            |");
+                                        System.out.println("| 2. Doi mat khau                      |");
+                                        System.out.println("| 3. Nap tien vao tai khoan            |");
+                                        System.out.println("| 4. Chon phong                        |");
+                                        System.out.println("| 5. Dang ky gio choi                  |");
+                                        System.out.println("| 6. Dang ky game                      |");
+                                        System.out.println("| 7. Danh sach game da dang ky         |");
+                                        System.out.println("| 8. Xem bien lai                      |");
+                                        if(kh.ktraTK(STK1))
+                                            System.out.println("| 9. Dang ky tai khoan VIP             |");
+                                        System.out.println("| 0. Dang xuat                         |");
+                                        System.out.println("------------------MENU------------------");
+                                        System.out.print("Nhap vao lua chon: ");
+                                        ch = sc.nextLine();
+                                        switch (ch) {
+                                            case "1":
+                                                kh.xemThongTin();
+                                                break;
+                                            case "2":
+                                                kh.doimk();
+                                                kh.capNhatFileKh();
+                                                break;
+                                            case "3":
+                                                kh.napTien();
+                                                break;
+                                            case "4":
+                                                kh.chonph();
+                                                break;
+                                            case"5":
+                                                int gio;
+                                                System.out.print("so gio ban muon dang ky: ");
+                                                gio = sc.nextInt();
+                                                sc.nextLine();
+                                                kh.dkGioChoi(gio);
+                                                kh.capNhatFileKh();
+                                                break;
+                                            case "6":
+                                                String mag;
+                                                kh.dsgame();
+                                                System.out.print("Nhap vao mag muon dang ky: ");
+                                                mag = sc.nextLine();
+                                                kh.dkgame(mag);
+                                                break;
+                                            case"7":
+                                                kh.dsGameDaThue();
+                                                break;
+                                            case "8":
+                                                kh.xembl();
+                                                break;
+                                                // System.out.println("Phi phong: "+);
+                                            case "9":
+                                                kh.DKVIP();
+                                                kh.capNhatFileKh();
+                                                break;
+                                            case"0":
+                                                if(kh.ktrasodu())
+                                                {
+                                                     kh.dangxuat();
+                                                }
+                                                else
+                                                {
+                                                    System.out.println("So du khong du vui long nap them tien !");
+                                                    ch="3";
+                                                }
+                                                break;
+                                            default:
+                                                System.out.println("lua chon khong hop le !");
+                                        }
+                                    } while (!ch.equals("0"));
+                                    
+                                }
+                                break;
+                            case "0":
+                                System.out.println("Thoat !");
+                                break;
+                            default:
+                               System.out.println("lua chon khong hop le !");
+                        }
+                    }while(!a.equals("0"));
                 default:
                     break;
             }

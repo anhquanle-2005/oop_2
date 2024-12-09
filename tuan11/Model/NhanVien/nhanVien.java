@@ -27,6 +27,34 @@ public abstract class nhanVien implements InhanVien{
         this.tenNV = tenNV;
     }
 
+    public int getOTP() {
+        return OTP;
+    }
+
+    public void setSTK(String sTK) {
+        STK = sTK;
+    }
+
+    public void setTenNV(String tenNV) {
+        this.tenNV = tenNV;
+    }
+
+    public void setPassWord(String passWord) {
+        this.passWord = passWord;
+    }
+
+    public void setNgayBD(LocalDate ngayBD) {
+        NgayBD = ngayBD;
+    }
+
+    public void setLuongCB(double luongCB) {
+        this.luongCB = luongCB;
+    }
+
+    public void setSc(Scanner sc) {
+        this.sc = sc;
+    }
+
     public String getSTK() {
         return STK;
     }
@@ -35,7 +63,7 @@ public abstract class nhanVien implements InhanVien{
         return tenNV;
     }
 
-    public String getPassWord() {
+    public String getPassword() {
         return passWord;
     }
     public void setpassWord(String passWord)
@@ -101,53 +129,54 @@ public abstract class nhanVien implements InhanVien{
            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
            NgayBD = LocalDate.parse(date,formatter);
         } catch (Exception e) {
-            // TODO: handle exception
         }
         setOTP(OTP);
     }
+
     public abstract double tinhLuong();
+    
     public void doiMK(String passcu, String passmoi)
     {
             setpassWord(passmoi);
     }
-    public void quenpass()
-    {
-        String passWord;
-        String sdt;
-        int dem=0,dem1=0;
-        int otp;
-        System.out.print("thiet lap mat khau moi :");
-        passWord = sc.nextLine();
-        System.out.print("Nhap vao so dien thoai: ");
-        sdt=sc.nextLine();
-        while(!sdt.equals(this.SDT))
-        {
-            dem++;
-            System.out.println("Nhap vao so dien thoai: ");
-            sdt=sc.nextLine();
-            if(dem ==3)
-                break;
-        }
-        if(dem>=3)
-            throw new IllegalArgumentException("thao tac sai qua so lan cho phep !");
-        System.out.println(OTP);
-        System.out.print("nhap vao OTP: ");
-        otp=sc.nextInt();
-        sc.nextLine();
-        while(otp!=OTP)
-        {
-            dem1++;
-            System.out.print("nhap vao OTP: ");
-            otp=sc.nextInt();
-            sc.nextLine();
-            if(dem1==3)
-                break;
-        }
-        if(dem1>=3)
-            throw new IllegalArgumentException("thao tac sai qua so lan cho phep !");
-        setpassWord(passWord);
-        System.out.println("Doi mat khau thanh cong !");
-    }
+    // public void quenpass()
+    // {
+    //     String passWord;
+    //     String sdt;
+    //     int dem=0,dem1=0;
+    //     int otp;
+    //     System.out.print("thiet lap mat khau moi :");
+    //     passWord = sc.nextLine();
+    //     System.out.print("Nhap vao so dien thoai: ");
+    //     sdt=sc.nextLine();
+    //     while(!sdt.equals(this.SDT))
+    //     {
+    //         dem++;
+    //         System.out.println("Nhap vao so dien thoai: ");
+    //         sdt=sc.nextLine();
+    //         if(dem ==3)
+    //             break;
+    //     }
+    //     if(dem>=3)
+    //         throw new IllegalArgumentException("thao tac sai qua so lan cho phep !");
+    //     System.out.println(OTP);
+    //     System.out.print("nhap vao OTP: ");
+    //     otp=sc.nextInt();
+    //     sc.nextLine();
+    //     while(otp!=OTP)
+    //     {
+    //         dem1++;
+    //         System.out.print("nhap vao OTP: ");
+    //         otp=sc.nextInt();
+    //         sc.nextLine();
+    //         if(dem1==3)
+    //             break;
+    //     }
+    //     if(dem1>=3)
+    //         throw new IllegalArgumentException("thao tac sai qua so lan cho phep !");
+    //     setpassWord(passWord);
+    //     System.out.println("Doi mat khau thanh cong !");
+    // }
     public abstract void chamCong();
 
 }
