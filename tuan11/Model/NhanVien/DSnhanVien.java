@@ -22,7 +22,6 @@
         protected int seconds =0;
         public int s =-1;
         protected Scanner sc;
-
         public DSnhanVien() {
             NHANVIEN = new ArrayList<>();
             try {
