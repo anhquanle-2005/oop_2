@@ -1,0 +1,1 @@
+NAM,12345,123@nam,1234567890,380000.0,0,Khach hang binh thuong,0

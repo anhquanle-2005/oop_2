@@ -1,0 +1,221 @@
+P001,001,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Chua dat,15000
+P001,002,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Bao tri,15000
+P001,003,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Da dat,15000
+P001,004,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Da dat,18000
+P001,005,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Bao tri,15000
+P001,006,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Da dat,15000
+P001,007,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Chua dat,15000
+P001,008,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Bao tri,15000
+P001,009,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Da dat,15000
+P001,010,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Da dat,15000
+P001,011,Intel Core i5,16GB RAM,GTX 1660 Super,Trung cap,Bao tri,20000
+P001,012,Intel Core i5,16GB RAM,GTX 1660 Super,Trung cap,Da dat,20000
+P001,013,Intel Core i5,16GB RAM,GTX 1660 Super,Trung cap,Chua dat,20000
+P001,014,Intel Core i5,16GB RAM,GTX 1660 Super,Trung cap,Bao tri,20000
+P001,015,Intel Core i5,16GB RAM,GTX 1660 Super,Trung cap,Da dat,20000
+P002,001,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Chua dat,15000
+P002,002,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Bao tri,15000
+P002,003,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Da dat,15000
+P002,004,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Chua dat,15000
+P002,005,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Bao tri,15000
+P002,006,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Da dat,15000
+P002,007,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Chua dat,15000
+P002,008,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Bao tri,15000
+P002,009,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Da dat,15000
+P002,010,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Chua dat,15000
+P002,011,Intel Core i5,16GB RAM,GTX 1660 Super,Trung cap,Bao tri,20000
+P002,012,Intel Core i5,16GB RAM,GTX 1660 Super,Trung cap,Da dat,20000
+P002,013,Intel Core i5,16GB RAM,GTX 1660 Super,Trung cap,Chua dat,20000
+P002,014,Intel Core i5,16GB RAM,GTX 1660 Super,Trung cap,Bao tri,20000
+P002,015,Intel Core i5,16GB RAM,GTX 1660 Super,Trung cap,Da dat,20000
+PD004,001,Intel Core i5,16GB RAM,GTX 1660 Super,Trung cap,Bao tri,20000
+PD004,002,Intel Core i5,16GB RAM,GTX 1660 Super,Trung cap,Da dat,20000
+PD004,003,Intel Core i5,16GB RAM,GTX 1660 Super,Trung cap,Chua dat,20000
+PD004,004,Intel Core i5,16GB RAM,GTX 1660 Super,Trung cap,Bao tri,20000
+PD004,005,Intel Core i5,16GB RAM,GTX 1660 Super,Trung cap,Da dat,20000
+PD004,006,Intel Core i5,16GB RAM,GTX 1660 Super,Trung cap,Chua dat,20000
+PD004,007,Intel Core i5,16GB RAM,GTX 1660 Super,Trung cap,Bao tri,20000
+PD004,008,Intel Core i5,16GB RAM,GTX 1660 Super,Trung cap,Da dat,20000
+PD004,009,Intel Core i5,16GB RAM,GTX 1660 Super,Trung cap,Chua dat,20000
+PD004,010,Intel Core i5,16GB RAM,GTX 1660 Super,Trung cap,Bao tri,20000
+PV005,001,Intel Core i7,32GB RAM,RTX 3060,Cao cap,Chua dat,30000
+PV005,002,Intel Core i7,32GB RAM,RTX 3060,Cao cap,Bao tri,30000
+PV005,003,Intel Core i7,32GB RAM,RTX 3060,Cao cap,Da dat,30000
+PV005,004,Intel Core i7,32GB RAM,RTX 3060,Cao cap,Chua dat,30000
+PV005,005,Intel Core i7,32GB RAM,RTX 3060,Cao cap,Bao tri,30000
+PV005,006,Intel Core i7,32GB RAM,RTX 3060,Cao cap,Da dat,30000
+PV005,007,Intel Core i7,32GB RAM,RTX 3060,Cao cap,Chua dat,30000
+PV005,008,Intel Core i7,32GB RAM,RTX 3060,Cao cap,Bao tri,30000
+PV005,009,Intel Core i7,32GB RAM,RTX 3060,Cao cap,Da dat,30000
+PV005,010,Intel Core i7,32GB RAM,RTX 3060,Cao cap,Da dat,30000
+PD006,001,Intel Core i7,32GB RAM,RTX 3060,Cao cap,Chua dat,30000
+PD006,002,Intel Core i7,32GB RAM,RTX 3060,Cao cap,Bao tri,30000
+PD006,003,Intel Core i7,32GB RAM,RTX 3060,Cao cap,Da dat,30000
+PD006,004,Intel Core i7,32GB RAM,RTX 3060,Cao cap,Chua dat,30000
+PD006,005,Intel Core i7,32GB RAM,RTX 3060,Cao cap,Bao tri,30000
+PD006,006,Intel Core i7,32GB RAM,RTX 3060,Cao cap,Da dat,30000
+PD006,007,Intel Core i7,32GB RAM,RTX 3060,Cao cap,Chua dat,30000
+PD006,008,Intel Core i7,32GB RAM,RTX 3060,Cao cap,Bao tri,30000
+PD006,009,Intel Core i7,32GB RAM,RTX 3060,Cao cap,Da dat,30000
+PD006,010,Intel Core i7,32GB RAM,RTX 3060,Cao cap,30000
+P007,001,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Chua dat,15000
+P007,002,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Bao tri,15000
+P007,003,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Da dat,15000
+P007,004,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Chua dat,15000
+P007,005,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Bao tri,15000
+P007,006,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Da dat,15000
+P007,007,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Chua dat,15000
+P007,008,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Bao tri,15000
+P007,009,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Da dat,15000
+P007,010,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Chua dat,15000
+P007,011,Intel Core i5,16GB RAM,GTX 1660 Super,Trung cap,Bao tri,20000
+P007,012,Intel Core i5,16GB RAM,GTX 1660 Super,Trung cap,Da dat,20000
+P007,013,Intel Core i5,16GB RAM,GTX 1660 Super,Trung cap,Chua dat,20000
+P007,014,Intel Core i5,16GB RAM,GTX 1660 Super,Trung cap,Bao tri,20000
+P007,015,Intel Core i5,16GB RAM,GTX 1660 Super,Trung cap,Da dat,20000
+P007,016,Intel Core i7,32GB RAM,RTX 3060,Cao cap,Chua dat,30000
+P007,017,Intel Core i7,32GB RAM,RTX 3060,Cao cap,Bao tri,30000
+P007,018,Intel Core i7,32GB RAM,RTX 3060,Cao cap,Da dat,30000
+P007,019,Intel Core i7,32GB RAM,RTX 3060,Cao cap,Chua dat,30000
+P007,020,Intel Core i7,32GB RAM,RTX 3060,Cao cap,Bao tri,30000
+PX008,001,Intel Core i7,32GB RAM,RTX 3060,Cao cap,Da dat,30000
+PX008,002,Intel Core i7,32GB RAM,RTX 3060,Cao cap,Da dat,30000
+PX008,003,Intel Core i7,32GB RAM,RTX 3060,Cao cap,Da dat,30000
+PX008,004,Intel Core i7,32GB RAM,RTX 3060,Cao cap,Da dat,30000
+PX008,005,Intel Core i7,32GB RAM,RTX 3060,Cao cap,Da dat,30000
+PX008,006,Intel Core i7,32GB RAM,RTX 3060,Cao cap,Da dat,30000
+PX008,007,Intel Core i7,32GB RAM,RTX 3060,Cao cap,Da dat,30000
+PX008,008,Intel Core i7,32GB RAM,RTX 3060,Cao cap,Da dat,30000
+PX008,009,Intel Core i7,32GB RAM,RTX 3060,Cao cap,Da dat,30000
+PX008,010,Intel Core i7,32GB RAM,RTX 3060,Cao cap,Da dat,30000
+P009,001,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Chua dat,15000
+P009,002,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Bao tri,15000
+P009,003,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Da dat,15000
+P009,004,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Chua dat,15000
+P009,005,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Bao tri,15000
+P009,006,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Da dat,15000
+P009,007,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Chua dat,15000
+P009,008,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Bao tri,15000
+P009,009,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Da dat,15000
+P009,010,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Chua dat,15000
+P009,011,Intel Core i5,16GB RAM,GTX 1660 Super,Trung cap,Bao tri,20000
+P009,012,Intel Core i5,16GB RAM,GTX 1660 Super,Trung cap,Da dat,20000
+P009,013,Intel Core i5,16GB RAM,GTX 1660 Super,Trung cap,Chua dat,20000
+P009,014,Intel Core i5,16GB RAM,GTX 1660 Super,Trung cap,Bao tri,20000
+P009,015,Intel Core i5,16GB RAM,GTX 1660 Super,Trung cap,Da dat,20000
+PD010,001,Intel Core i7,32GB RAM,RTX 3060,Cao cap,Chua dat,30000
+PD010,002,Intel Core i7,32GB RAM,RTX 3060,Cao cap,Chua dat,30000
+PD010,003,Intel Core i7,32GB RAM,RTX 3060,Cao cap,Chua dat,30000
+PD010,004,Intel Core i7,32GB RAM,RTX 3060,Cao cap,Chua dat,30000
+PD010,005,Intel Core i7,32GB RAM,RTX 3060,Cao cap,Chua dat,30000
+PD010,006,Intel Core i7,32GB RAM,RTX 3060,Cao cap,Chua dat,30000
+PD010,007,Intel Core i7,32GB RAM,RTX 3060,Cao cap,Chua dat,30000
+PD010,008,Intel Core i7,32GB RAM,RTX 3060,Cao cap,Chua dat,30000
+PD010,009,Intel Core i7,32GB RAM,RTX 3060,Cao cap,Chua dat,30000
+PD010,010,Intel Core i7,32GB RAM,RTX 3060,Cao cap,Chua dat,30000
+P012,001,i7,32gb,3060,Trung cap,Da dat,20000
+P001,001,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Chua dat,15000.0
+P001,002,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Bao tri,15000.0
+P001,003,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Da dat,15000.0
+P001,004,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Chua dat,15000.0
+P001,005,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Bao tri,15000.0
+P001,006,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Da dat,15000.0
+P001,007,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Chua dat,15000.0
+P001,008,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Bao tri,15000.0
+P001,009,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Da dat,15000.0
+P001,010,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Da dat,15000.0
+P001,011,Intel Core i5,16GB RAM,GTX 1660 Super,Trung cap,Bao tri,20000.0
+P001,012,Intel Core i5,16GB RAM,GTX 1660 Super,Trung cap,Da dat,20000.0
+P001,013,Intel Core i5,16GB RAM,GTX 1660 Super,Trung cap,Chua dat,20000.0
+P001,014,Intel Core i5,16GB RAM,GTX 1660 Super,Trung cap,Bao tri,20000.0
+P001,015,Intel Core i5,16GB RAM,GTX 1660 Super,Trung cap,Da dat,20000.0
+P001,001,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Chua dat,15000.0
+P001,002,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Bao tri,15000.0
+P001,003,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Da dat,15000.0
+P001,004,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Da dat,18000.0
+P001,005,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Bao tri,15000.0
+P001,006,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Da dat,15000.0
+P001,007,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Chua dat,15000.0
+P001,008,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Bao tri,15000.0
+P001,009,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Da dat,15000.0
+P001,010,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Da dat,15000.0
+P001,011,Intel Core i5,16GB RAM,GTX 1660 Super,Trung cap,Bao tri,20000.0
+P001,012,Intel Core i5,16GB RAM,GTX 1660 Super,Trung cap,Da dat,20000.0
+P001,013,Intel Core i5,16GB RAM,GTX 1660 Super,Trung cap,Chua dat,20000.0
+P001,014,Intel Core i5,16GB RAM,GTX 1660 Super,Trung cap,Bao tri,20000.0
+P001,015,Intel Core i5,16GB RAM,GTX 1660 Super,Trung cap,Da dat,20000.0
+P001,001,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Chua dat,15000.0
+P001,002,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Bao tri,15000.0
+P001,003,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Da dat,15000.0
+P001,004,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Chua dat,15000.0
+P001,005,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Bao tri,15000.0
+P001,006,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Da dat,15000.0
+P001,007,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Chua dat,15000.0
+P001,008,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Bao tri,15000.0
+P001,009,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Da dat,15000.0
+P001,010,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Da dat,15000.0
+P001,011,Intel Core i5,16GB RAM,GTX 1660 Super,Trung cap,Bao tri,20000.0
+P001,012,Intel Core i5,16GB RAM,GTX 1660 Super,Trung cap,Da dat,20000.0
+P001,013,Intel Core i5,16GB RAM,GTX 1660 Super,Trung cap,Chua dat,20000.0
+P001,014,Intel Core i5,16GB RAM,GTX 1660 Super,Trung cap,Bao tri,20000.0
+P001,015,Intel Core i5,16GB RAM,GTX 1660 Super,Trung cap,Da dat,20000.0
+P001,001,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Chua dat,15000.0
+P001,002,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Bao tri,15000.0
+P001,003,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Da dat,15000.0
+P001,004,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Da dat,18000.0
+P001,005,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Bao tri,15000.0
+P001,006,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Da dat,15000.0
+P001,007,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Chua dat,15000.0
+P001,008,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Bao tri,15000.0
+P001,009,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Da dat,15000.0
+P001,010,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Da dat,15000.0
+P001,011,Intel Core i5,16GB RAM,GTX 1660 Super,Trung cap,Bao tri,20000.0
+P001,012,Intel Core i5,16GB RAM,GTX 1660 Super,Trung cap,Da dat,20000.0
+P001,013,Intel Core i5,16GB RAM,GTX 1660 Super,Trung cap,Chua dat,20000.0
+P001,014,Intel Core i5,16GB RAM,GTX 1660 Super,Trung cap,Bao tri,20000.0
+P001,015,Intel Core i5,16GB RAM,GTX 1660 Super,Trung cap,Da dat,20000.0
+P001,001,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Chua dat,15000.0
+P001,002,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Bao tri,15000.0
+P001,003,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Da dat,15000.0
+P001,004,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Chua dat,15000.0
+P001,005,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Bao tri,15000.0
+P001,006,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Da dat,15000.0
+P001,007,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Chua dat,15000.0
+P001,008,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Bao tri,15000.0
+P001,009,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Da dat,15000.0
+P001,010,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Da dat,15000.0
+P001,011,Intel Core i5,16GB RAM,GTX 1660 Super,Trung cap,Bao tri,20000.0
+P001,012,Intel Core i5,16GB RAM,GTX 1660 Super,Trung cap,Da dat,20000.0
+P001,013,Intel Core i5,16GB RAM,GTX 1660 Super,Trung cap,Chua dat,20000.0
+P001,014,Intel Core i5,16GB RAM,GTX 1660 Super,Trung cap,Bao tri,20000.0
+P001,015,Intel Core i5,16GB RAM,GTX 1660 Super,Trung cap,Da dat,20000.0
+P001,001,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Chua dat,15000.0
+P001,002,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Bao tri,15000.0
+P001,003,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Da dat,15000.0
+P001,004,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Da dat,18000.0
+P001,005,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Bao tri,15000.0
+P001,006,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Da dat,15000.0
+P001,007,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Chua dat,15000.0
+P001,008,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Bao tri,15000.0
+P001,009,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Da dat,15000.0
+P001,010,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Da dat,15000.0
+P001,011,Intel Core i5,16GB RAM,GTX 1660 Super,Trung cap,Bao tri,20000.0
+P001,012,Intel Core i5,16GB RAM,GTX 1660 Super,Trung cap,Da dat,20000.0
+P001,013,Intel Core i5,16GB RAM,GTX 1660 Super,Trung cap,Chua dat,20000.0
+P001,014,Intel Core i5,16GB RAM,GTX 1660 Super,Trung cap,Bao tri,20000.0
+P001,015,Intel Core i5,16GB RAM,GTX 1660 Super,Trung cap,Da dat,20000.0
+P001,001,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Chua dat,15000.0
+P001,002,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Bao tri,15000.0
+P001,003,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Da dat,15000.0
+P001,004,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Chua dat,15000.0
+P001,005,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Bao tri,15000.0
+P001,006,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Da dat,15000.0
+P001,007,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Chua dat,15000.0
+P001,008,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Bao tri,15000.0
+P001,009,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Da dat,15000.0
+P001,010,Intel Core i3,8GB RAM,GTX 1050,Pho thong,Da dat,15000.0
+P001,011,Intel Core i5,16GB RAM,GTX 1660 Super,Trung cap,Bao tri,20000.0
+P001,012,Intel Core i5,16GB RAM,GTX 1660 Super,Trung cap,Da dat,20000.0
+P001,013,Intel Core i5,16GB RAM,GTX 1660 Super,Trung cap,Chua dat,20000.0
+P001,014,Intel Core i5,16GB RAM,GTX 1660 Super,Trung cap,Bao tri,20000.0
+P001,015,Intel Core i5,16GB RAM,GTX 1660 Super,Trung cap,Da dat,20000.0
